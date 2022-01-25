@@ -1,22 +1,7 @@
 import type { AppProps } from "next/app";
-//Fonts
-import "@fontsource/nunito";
-//Custom theme
-import { customTheme } from "theme";
-//Chakra-ui
-import { ChakraProvider, CSSReset } from "@chakra-ui/react";
-//Components
-import Layout from "components/organisms/Layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <ChakraProvider theme={customTheme}>
-      <CSSReset />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
