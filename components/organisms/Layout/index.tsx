@@ -3,11 +3,13 @@ import * as React from "react";
 import { Box } from "@chakra-ui/react";
 //Components
 import Header from "components/organisms/Header";
+import Body from "../Body";
 
 const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Header />
+      <Body />
       <Box>{children}</Box>
     </>
   );
