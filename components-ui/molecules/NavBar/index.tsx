@@ -1,8 +1,9 @@
 import * as React from "react";
+import NextLink from "next/link";
 //Chakra-ui
-import { Container, Button } from "@chakra-ui/react";
-import styled from "@emotion/styled";
+import { Container } from "@chakra-ui/react";
 //Components
+import ButtonStyled from "components-ui/atoms/ButtonStyled";
 
 const NavBar = () => {
   return (
@@ -15,27 +16,21 @@ const NavBar = () => {
       alignItems="center"
       justifyContent="space-evenly"
     >
-      <ButtonStyled>Teas</ButtonStyled>
-      <ButtonStyled>Vendors</ButtonStyled>
-      <ButtonStyled>About</ButtonStyled>
+      <ButtonStyled>
+        <NextLink href="/">Teas</NextLink>
+      </ButtonStyled>
+      <ButtonStyled>
+        <NextLink href="./vendors" passHref>
+          Vendors
+        </NextLink>
+      </ButtonStyled>
+      <ButtonStyled>
+        <NextLink href="./about" passHref>
+          About
+        </NextLink>
+      </ButtonStyled>
     </Container>
   );
 };
-
-const ButtonStyled = styled(Button)`
-  background: none;
-  font-size: 18px;
-  padding: 0;
-  margin-inline: 0.5rem;
-
-  :focus {
-    /* box-shadow: none; */
-  }
-
-  :hover {
-    background: inherit;
-    color: #749b74;
-  }
-`;
 
 export default NavBar;
