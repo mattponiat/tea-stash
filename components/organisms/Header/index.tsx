@@ -1,10 +1,10 @@
 import * as React from "react";
 //Chakra-ui
-import { Flex } from "@chakra-ui/react";
+import { Flex, Button } from "@chakra-ui/react";
+import styled from "@emotion/styled";
 //Components
 import Logo from "components-ui/atoms/Logo";
-import NavBar from "components/molecules/NavBar";
-import ButtonComp from "components-ui/atoms/ButtonComp";
+import NavBar from "components-ui/molecules/NavBar";
 
 const Header = () => {
   return (
@@ -13,18 +13,28 @@ const Header = () => {
       w="100%"
       h="fit-content"
       p="6"
-      //   border="1px solid black"
       boxShadow="0px 0px 1px"
       alignItems="center"
-      backgroundColor="mainBeige"
+      bg="mainBeige"
     >
       <Logo />
       <NavBar />
-      <ButtonComp backgroundColor="secondaryGreen" color="white">
-        Dark mode toggle
-      </ButtonComp>
+      <ButtonStyled
+        bg="secondaryGreen"
+        color="white"
+        ml="2.25rem"
+        minWidth="auto"
+      >
+        Dark mode
+      </ButtonStyled>
     </Flex>
   );
 };
+
+const ButtonStyled = styled(Button)`
+  :hover {
+    background: #8ab18a;
+  }
+`;
 
 export default Header;
