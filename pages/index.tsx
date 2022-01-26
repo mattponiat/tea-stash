@@ -4,7 +4,7 @@ import { Box, Container } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
   return (
-    <Box as="main">
+    <Box>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Teas - tea-stash</title>
