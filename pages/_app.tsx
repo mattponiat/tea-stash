@@ -3,6 +3,9 @@ import type { AppProps } from "next/app";
 import "@fontsource/nunito";
 //Custom theme
 import { customTheme } from "customTheme";
+//Global styles
+import { GlobalStyles } from "GlobalStyles";
+import { Global } from "@emotion/react";
 //Chakra-ui
 import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 //Components
@@ -12,6 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={customTheme}>
       <CSSReset />
+      <Global styles={GlobalStyles} />
       <Layout>
         <Component {...pageProps} />
       </Layout>
