@@ -5,22 +5,9 @@ import { gql } from "@apollo/client";
 import client from "apolloClient";
 //Chakra-ui
 import { Box, Heading, Text } from "@chakra-ui/react";
+import { ITeaTypes } from "types";
 
-export interface TeaTypes {
-  name: string;
-  slug: string;
-  description: string;
-  country: string;
-  city: string;
-  harvestDate?: string;
-  price: number;
-  coverImage: string;
-  typeOfTea: {
-    name: string;
-  };
-}
-
-const TeaPage = ({ tea }: { tea: TeaTypes }) => {
+const TeaPage = ({ tea }: { tea: ITeaTypes }) => {
   return (
     <Box>
       <Heading>{tea.name}</Heading>
