@@ -1,10 +1,8 @@
 import * as React from "react";
 import NextLink from "next/link";
 //Chakra-ui
-import { Heading, Link } from "@chakra-ui/react";
+import { Button, Heading } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-//Components
-import ButtonStyled from "../ButtonStyled";
 
 const Logo = () => {
   return (
@@ -20,7 +18,20 @@ const Logo = () => {
 };
 
 const SpanStyled = styled.span`
-  color: green;
+  color: #749b74;
+`;
+
+const ButtonStyled = styled(Button)`
+  min-width: max-content;
+  padding: 1px;
+  background: none;
+  margin-right: auto;
+
+  :hover {
+    background: none;
+    box-shadow: none;
+    color: #749b74;
+  }
 `;
 
 export default Logo;
