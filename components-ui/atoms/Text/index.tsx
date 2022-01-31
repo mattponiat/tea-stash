@@ -7,7 +7,8 @@ export const Text = ({ children, ...props }: { children: React.ReactNode }) => {
 };
 
 const SpanStyled = styled.span`
-  font-size: 0.75rem;
+  font-size: 1rem;
+  margin-top: 8px;
 `;
 
 export default Text;
