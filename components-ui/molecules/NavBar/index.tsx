@@ -2,7 +2,7 @@ import * as React from "react";
 //Chakra-ui
 import { Container } from "@chakra-ui/react";
 //Components
-import { StyledLink } from "components-ui/atoms/StyledLink";
+import StyledLink from "components-ui/atoms/StyledLink";
 
 const NavBar: React.FC = () => {
   return (
