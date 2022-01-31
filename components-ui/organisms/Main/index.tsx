@@ -4,13 +4,14 @@ import { Box } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
 const Main = ({ children }: { children: React.ReactNode }) => {
-  return <StyledBox as="main">{children}</StyledBox>;
+  return (
+    <StyledBox w="100vw" minHeight="90vh" h="auto" as="main">
+      {children}
+    </StyledBox>
+  );
 };
 
 const StyledBox = styled(Box)`
-  width: 100vw;
-  min-height: 100%;
-  height: max-content;
-  background-color: cyan;
+  //background
 `;
 export default Main;
