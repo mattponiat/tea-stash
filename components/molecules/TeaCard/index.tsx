@@ -1,36 +1,55 @@
 import * as React from "react";
-import { GetStaticProps } from "next";
+import Link from "next/link";
 //Chakra-ui
-import { Box } from "@chakra-ui/react";
-//Apollo client
-import client from "apolloClient";
-import { gql } from "@apollo/client";
+import { Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react";
 //Components
 import Label from "components-ui/atoms/Label";
-//Interface
-import { ITeaTypes } from "types";
+import Text from "components-ui/atoms/Text";
 
-const TeaCard = ({ tea }: { tea: ITeaTypes }) => {
+interface TeaCardProps {
+  name: string;
+  country: string;
+  type: string;
+  image: string;
+  slug: string;
+}
+
+const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
   return (
-    <Box>
-      <Label>{tea.name}</Label>
-    </Box>
+    <LinkBox
+      w="18rem"
+      h="19rem"
+      m="4"
+      pb="2"
+      bg="mainBeige"
+      borderRadius="8"
+      boxShadow="0px 0px 4px"
+      _hover={{ boxShadow: "0px 0px 6px" }}
+    >
+      <Link href={`/${slug}`} passHref>
+        <LinkOverlay>
+          <Image
+            src={image}
+            alt={`${name}`}
+            boxSize="fit-content"
+            objectFit="cover"
+            w="100%"
+            h="50%"
+            borderRadius="8"
+          />
+          <Flex flexDirection="column" p="2">
+            <Label>{name}</Label>
+            <Text>
+              Country of origin: <b>{country}</b>
+            </Text>
+            <Text>
+              Type of tea: <b>{type}</b>
+            </Text>
+          </Flex>
+        </LinkOverlay>
+      </Link>
+    </LinkBox>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await client.query({
-    query: gql`
-      query Teas {
-        teas {
-          name
-        }
-      }
-    `,
-  });
-
-  const { tea } = data;
-  return { props: tea };
 };
 
 export default TeaCard;
