@@ -10,4 +10,9 @@ export interface ITeaTypes {
   typeOfTea: {
     name: string;
   };
+  teas: ITeaTypes[];
 }
+
+export type TeasProps = {
+  teas: ITeaTypes[];
+};
