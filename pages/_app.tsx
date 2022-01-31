@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import "focus-visible/dist/focus-visible";
 //Fonts
 import "@fontsource/nunito";
 //Custom theme
@@ -9,13 +10,13 @@ import { Global } from "@emotion/react";
 //Chakra-ui
 import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 //Components
-import Layout from "components/organisms/Layout";
+import Layout from "components-ui/organisms/Layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={customTheme}>
-      <CSSReset />
       <Global styles={GlobalStyles} />
+      <CSSReset />
       <Layout>
         <Component {...pageProps} />
       </Layout>
