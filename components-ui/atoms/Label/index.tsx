@@ -9,7 +9,13 @@ export const Label = ({
   children: React.ReactNode;
 }) => {
   return (
-    <Heading color="secondaryGreen" fontWeight="black" {...props}>
+    <Heading
+      size="lg"
+      color="secondaryGreen"
+      fontWeight="900"
+      mt="1"
+      {...props}
+    >
       {children}
     </Heading>
   );
