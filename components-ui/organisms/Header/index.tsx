@@ -28,6 +28,7 @@ const Header = () => {
 };
 
 const ButtonStyled = styled(Button)`
+  font-size: 1.125rem;
   :hover {
     background: #8ab18a;
   }
