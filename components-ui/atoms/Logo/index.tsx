@@ -1,19 +1,21 @@
 import * as React from "react";
-import NextLink from "next/link";
+import Link from "next/link";
 //Chakra-ui
-import { Button, Heading } from "@chakra-ui/react";
+import { Heading, Button, LinkBox } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
 const Logo = () => {
   return (
-    <ButtonStyled>
-      <NextLink href="/" passHref>
-        <Heading fontWeight="700" fontSize="32px" w="max-content">
-          <SpanStyled>tea</SpanStyled>
-          <span>-stash</span>
-        </Heading>
-      </NextLink>
-    </ButtonStyled>
+    <LinkBox>
+      <Link href="/" passHref>
+        <ButtonStyled>
+          <Heading fontWeight="700" fontSize="2rem" w="max-content">
+            <SpanStyled>tea</SpanStyled>
+            <span>-stash</span>
+          </Heading>
+        </ButtonStyled>
+      </Link>
+    </LinkBox>
   );
 };
 
@@ -22,14 +24,11 @@ const SpanStyled = styled.span`
 `;
 
 const ButtonStyled = styled(Button)`
-  min-width: max-content;
-  padding: 1px;
   background: none;
-  margin-right: auto;
-
+  padding: 0;
+  margin: 0;
   :hover {
     background: none;
-    box-shadow: none;
     color: #749b74;
   }
 `;
