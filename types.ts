@@ -4,13 +4,12 @@ export interface ITeaTypes {
   description: string;
   country: string;
   city: string;
-  harvestDate?: string;
+  harvestDate: string;
   price: number;
   coverImage: string;
   typeOfTea: {
     name: string;
   };
-  teas: ITeaTypes[];
 }
 
 export type TeasProps = {
