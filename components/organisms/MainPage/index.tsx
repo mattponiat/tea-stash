@@ -10,14 +10,14 @@ import { TeasProps } from "types";
 
 const MainPage = ({ teas }: TeasProps) => {
   return (
-    <Flex flexDirection="column" alignItems="center" marginTop="0.5">
+    <Flex flexDirection="column" alignItems="center" marginTop="1" h="auto">
       <SearchBar teas={teas} />
       <Grid
         templateColumns="repeat(auto-fit, minmax(300px, 1fr))"
-        gridGap="1"
         placeItems="center"
-        border="1px solid black"
+        // border="1px solid black"
         w="75%"
+        h="auto"
       >
         {teas.map((elem: ITeaTypes, i: number) => {
           return (
