@@ -1,7 +1,7 @@
 import Link from "next/link";
 //Chakra-ui
-import styled from "@emotion/styled";
 import { LinkBox, Button } from "@chakra-ui/react";
+import styled from "@emotion/styled";
 
 interface LinkTypes {
   href: string;

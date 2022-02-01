@@ -1,4 +1,3 @@
-import * as React from "react";
 //Chakra-ui
 import { Container } from "@chakra-ui/react";
 //Components

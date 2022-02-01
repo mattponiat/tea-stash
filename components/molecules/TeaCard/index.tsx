@@ -1,4 +1,3 @@
-import * as React from "react";
 import Link from "next/link";
 //Chakra-ui
 import { Flex, Grid, Image, LinkBox, LinkOverlay } from "@chakra-ui/react";

@@ -1,4 +1,3 @@
-import * as React from "react";
 //Chakra-ui
 import styled from "@emotion/styled";
 

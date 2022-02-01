@@ -1,4 +1,3 @@
-import * as React from "react";
 //Chakra-ui
 import { Flex, Grid } from "@chakra-ui/react";
 //Components
