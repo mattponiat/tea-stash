@@ -20,10 +20,10 @@ const StyledLink: React.FC<LinkTypes> = ({ href, children }) => {
 
 const CustomButton = styled(Button)`
   background: none;
+  border: none;
   padding: 1;
-  margin: 0;
-  width: min-content;
-  height: fit-content;
+  width: auto;
+  height: auto;
   font-size: 1.125rem;
   font-weight: 600;
 
