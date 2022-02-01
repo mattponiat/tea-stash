@@ -10,7 +10,7 @@ export const Label = ({
 }) => {
   return (
     <Heading
-      size="lg"
+      fontSize="1.75rem"
       color="secondaryGreen"
       fontWeight="900"
       mt="1"
