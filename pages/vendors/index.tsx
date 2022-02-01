@@ -1,7 +1,8 @@
-import Head from "next/head";
 import * as React from "react";
+import Head from "next/head";
+import { NextPage } from "next";
 
-const vendors = () => {
+const vendors: NextPage = () => {
   return (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
