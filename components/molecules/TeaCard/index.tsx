@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 //Chakra-ui
-import { Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import { Flex, Grid, Image, LinkBox, LinkOverlay } from "@chakra-ui/react";
 //Components
 import Label from "components-ui/atoms/Label";
 import Text from "components-ui/atoms/Text";
@@ -17,9 +17,9 @@ interface TeaCardProps {
 const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
   return (
     <LinkBox
-      w="18rem"
+      w="17rem"
       h="19rem"
-      m="4"
+      my="4"
       pb="2"
       bg="mainBeige"
       borderRadius="8"
@@ -33,18 +33,20 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
             alt={`${name}`}
             boxSize="fit-content"
             objectFit="cover"
-            w="100%"
-            h="50%"
+            w="300px"
+            h="150px"
             borderRadius="8"
           />
-          <Flex flexDirection="column" p="2">
+          <Flex flexDirection="column" p="2" h="52%">
             <Label>{name}</Label>
-            <Text>
-              Country of origin: <b>{country}</b>
-            </Text>
-            <Text>
-              Type of tea: <b>{type}</b>
-            </Text>
+            <Grid templateColumns="repeat(1, 1fr)" alignContent="end" h="100%">
+              <Text>
+                Country of origin: <b>{country}</b>
+              </Text>
+              <Text>
+                Type of tea: <b>{type}</b>
+              </Text>
+            </Grid>
           </Flex>
         </LinkOverlay>
       </Link>
