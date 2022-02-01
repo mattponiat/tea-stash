@@ -15,4 +15,9 @@ export const GlobalStyles = css`
     padding: 0;
     margin: 0;
   }
+
+  .js-focus-visible :focus:not([data-focus-visible-added]) {
+    outline: none;
+    box-shadow: none;
+  }
 `;
