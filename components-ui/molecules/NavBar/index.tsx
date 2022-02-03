@@ -15,8 +15,8 @@ const NavBar: React.FC = () => {
       justifyContent="space-evenly"
     >
       <StyledLink href="/">Teas</StyledLink>
-      <StyledLink href="/Vendors">Vendors</StyledLink>
-      <StyledLink href="/About">About</StyledLink>
+      <StyledLink href="/vendors">Vendors</StyledLink>
+      <StyledLink href="/about">About</StyledLink>
     </Container>
   );
 };
