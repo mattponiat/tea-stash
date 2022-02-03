@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 //Chakra-ui
-import { Flex, Grid, Image, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import { Flex, Grid, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import styled from "@emotion/styled";
 //Components
 import Label from "components-ui/atoms/Label";
 import Text from "components-ui/atoms/Text";
@@ -18,8 +20,7 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
     <LinkBox
       w="17rem"
       h="19rem"
-      my="4"
-      pb="2"
+      mb="5.8rem"
       bg="mainBeige"
       borderRadius="8"
       boxShadow="0px 0px 4px"
@@ -27,18 +28,23 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
     >
       <Link href={`/${slug}`} passHref>
         <LinkOverlay>
-          <Image
+          <ImageStyled
             src={image}
             alt={`${name}`}
-            boxSize="fit-content"
+            layout="responsive"
             objectFit="cover"
-            w="300px"
-            h="150px"
-            borderRadius="8"
+            width="300px"
+            height="170px"
           />
-          <Flex flexDirection="column" p="2" h="52%">
+          <Flex flexDirection="column" p="3" h="49%" position="relative">
             <Label>{name}</Label>
-            <Grid templateColumns="repeat(1, 1fr)" alignContent="end" h="100%">
+            <Grid
+              templateColumns="repeat(1, 1fr)"
+              alignContent="end"
+              h="auto"
+              position="absolute"
+              bottom="0.75rem"
+            >
               <Text>
                 Country of origin: <b>{country}</b>
               </Text>
@@ -52,5 +58,9 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
     </LinkBox>
   );
 };
+
+const ImageStyled = styled(Image)`
+  border-radius: 8px;
+`;
 
 export default TeaCard;
