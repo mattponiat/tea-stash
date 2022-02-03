@@ -14,6 +14,7 @@ export const GlobalStyles = css`
     min-width: 100vw;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
   }
 
   .js-focus-visible :focus:not([data-focus-visible-added]) {
