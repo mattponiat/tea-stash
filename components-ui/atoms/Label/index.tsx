@@ -9,10 +9,9 @@ export const Label = ({
 }) => {
   return (
     <Heading
-      fontSize="1.75rem"
+      fontSize="1.625rem"
       color="secondaryGreen"
       fontWeight="900"
-      mt="1"
       {...props}
     >
       {children}
