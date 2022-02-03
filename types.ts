@@ -6,7 +6,9 @@ export interface ITeaTypes {
   city: string;
   harvestDate: string;
   price: number;
-  coverImage: string;
+  image: {
+    url: string;
+  };
   typeOfTea: {
     name: string;
   };
