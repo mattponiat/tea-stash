@@ -23,7 +23,7 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
       mb="5.8rem"
       bg="mainBeige"
       borderRadius="8"
-      boxShadow="0px 0px 4px"
+      boxShadow="0px 0px 5px rgba(0, 0, 0, 0.4)"
       _hover={{ boxShadow: "0px 0px 6px" }}
     >
       <Link href={`/${slug}`} passHref>
@@ -39,11 +39,11 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
           <Flex flexDirection="column" p="3" h="49%" position="relative">
             <Label>{name}</Label>
             <Grid
-              templateColumns="repeat(1, 1fr)"
-              alignContent="end"
-              h="auto"
               position="absolute"
               bottom="0.75rem"
+              h="auto"
+              templateColumns="repeat(1, 1fr)"
+              alignContent="end"
             >
               <Text>
                 Country of origin: <b>{country}</b>
