@@ -20,7 +20,7 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
     <LinkBox
       w="17rem"
       h="19rem"
-      mb="5.8rem"
+      mb="5.45rem"
       bg="mainBeige"
       borderRadius="8"
       boxShadow="0px 0px 5px rgba(0, 0, 0, 0.4)"
