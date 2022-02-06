@@ -1,5 +1,11 @@
 import { extendTheme } from "@chakra-ui/react";
 
+const Menu = {
+  baseStyle: {
+    list: { minWidth: "inherit" },
+  },
+};
+
 export const customTheme = extendTheme({
   fonts: {
     heading: "nunito",
@@ -8,5 +14,8 @@ export const customTheme = extendTheme({
   colors: {
     mainBeige: "#FFF7E7",
     secondaryGreen: "#749B74",
+  },
+  components: {
+    Menu,
   },
 });
