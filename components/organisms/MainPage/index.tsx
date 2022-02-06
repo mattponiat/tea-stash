@@ -1,7 +1,7 @@
 //Chakra-ui
 import { Flex, Grid } from "@chakra-ui/react";
 //Components
-import SearchBar from "components/molecules/SearchBar";
+import SearchBar from "components/organisms/SearchBar";
 import TeaCard from "components-ui/molecules/TeaCard";
 //Types
 import { ITeaTypes } from "types";
@@ -17,10 +17,10 @@ const MainPage = ({ teas }: TeasProps) => {
         w="75%"
         h="auto"
       >
-        {teas.map((elem: ITeaTypes, i: number) => {
+        {teas.map((elem: ITeaTypes) => {
           return (
             <TeaCard
-              key={i + 1}
+              key={elem.name}
               name={elem.name}
               country={elem.country}
               type={elem.typeOfTea.name}
