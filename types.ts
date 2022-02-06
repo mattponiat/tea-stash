@@ -17,3 +17,5 @@ export interface ITeaTypes {
 export type TeasProps = {
   teas: ITeaTypes[];
 };
+
+export type Teas = ITeaTypes[];
