@@ -9,6 +9,8 @@ import { Fade, useDisclosure } from "@chakra-ui/react";
 import MainPage from "components/organisms/MainPage";
 //Types
 import { TeasProps } from "types";
+//Context provider
+import { SearchTeasProvider } from "context/SearchTeas";
 
 const Home: NextPage<TeasProps> = ({ teas }) => {
   const { isOpen } = useDisclosure();
@@ -19,7 +21,9 @@ const Home: NextPage<TeasProps> = ({ teas }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Teas - tea-stash</title>
       </Head>
-      <MainPage teas={teas} />
+      <SearchTeasProvider>
+        <MainPage teas={teas} />
+      </SearchTeasProvider>
     </Fade>
   );
 };
