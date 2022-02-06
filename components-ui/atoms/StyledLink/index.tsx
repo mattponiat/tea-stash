@@ -1,36 +1,32 @@
 import Link from "next/link";
 //Chakra-ui
 import { LinkBox, Button } from "@chakra-ui/react";
-import styled from "@emotion/styled";
 
 interface LinkTypes {
   href: string;
   children: React.ReactNode;
 }
 
-const StyledLink: React.FC<LinkTypes> = ({ href, children }) => {
+const StyledLink = ({ href, children }: LinkTypes) => {
   return (
     <LinkBox>
       <Link href={href} passHref>
-        <CustomButton>{children}</CustomButton>
+        <Button
+          bg="none"
+          border="none"
+          p="1"
+          w="auto"
+          h="auto"
+          fontSize="1.125rem"
+          fontWeight="600"
+          _hover={{ background: "none", color: "secondaryGreen" }}
+          _active={{ color: "#8ab18a" }}
+        >
+          {children}
+        </Button>
       </Link>
     </LinkBox>
   );
 };
-
-const CustomButton = styled(Button)`
-  background: none;
-  border: none;
-  padding: 1;
-  width: auto;
-  height: auto;
-  font-size: 1.125rem;
-  font-weight: 600;
-
-  :hover {
-    background: none;
-    color: #749b74;
-  }
-`;
 
 export default StyledLink;
