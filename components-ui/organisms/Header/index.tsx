@@ -1,6 +1,5 @@
 //Chakra-ui
 import { Button, Grid } from "@chakra-ui/react";
-import styled from "@emotion/styled";
 //Components
 import Logo from "components-ui/atoms/Logo";
 import NavBar from "components-ui/molecules/NavBar";
@@ -19,18 +18,19 @@ const Header = () => {
     >
       <Logo />
       <NavBar />
-      <ButtonStyled bg="secondaryGreen" color="white" minWidth="auto" ml="auto">
+      <Button
+        fontSize="1.125rem"
+        bg="secondaryGreen"
+        color="white"
+        minWidth="auto"
+        ml="auto"
+        _hover={{ background: "#8ab18a" }}
+        _active={{ background: "secondaryGreen" }}
+      >
         Dark mode
-      </ButtonStyled>
+      </Button>
     </Grid>
   );
 };
-
-const ButtonStyled = styled(Button)`
-  font-size: 1.125rem;
-  :hover {
-    background: #8ab18a;
-  }
-`;
 
 export default Header;
