@@ -50,7 +50,17 @@ type UseSearchTeasType = ReturnType<typeof SearchTeas>;
 
 const SearchTeasContext = React.createContext<UseSearchTeasType | null>(null);
 
-export const useSearchTeasContext = () => React.useContext(SearchTeasContext)!;
+// export const useSearchTeasContext = () => React.useContext(SearchTeasContext)!;
+
+export const useSearchTeasContext = () => {
+  const context = React.useContext(SearchTeasContext);
+  if (!context) {
+    throw new Error(
+      "useSearchTeasContext must be used withing a SearchTeasContextProvider"
+    );
+  }
+  return context;
+};
 
 export const SearchTeasProvider = ({
   children,
