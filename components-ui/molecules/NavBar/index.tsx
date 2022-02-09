@@ -11,8 +11,7 @@ const NavBar: React.FC = () => {
       minWidth="13rem"
       p="1"
       display="flex"
-      alignItems="center"
-      justifyContent="space-evenly"
+      justifyContent="center"
     >
       <StyledLink href="/">Teas</StyledLink>
       <StyledLink href="/vendors">Vendors</StyledLink>
