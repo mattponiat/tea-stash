@@ -9,7 +9,7 @@ interface LinkTypes {
 
 const StyledLink = ({ href, children }: LinkTypes) => {
   return (
-    <LinkBox>
+    <LinkBox m="auto">
       <Link href={href} passHref>
         <Button
           bg="none"

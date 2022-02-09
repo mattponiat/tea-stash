@@ -8,6 +8,7 @@ const SearchLabel = ({ children }: { children: React.ReactNode }) => {
 const SpanStyled = styled.span`
   font-size: 1rem;
   font-weight: 600;
+  margin-right: 12px;
 `;
 
 export default SearchLabel;
