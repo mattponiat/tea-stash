@@ -6,8 +6,14 @@ import TeaCard from "components-ui/molecules/TeaCard";
 //Types
 import { ITeaTypes } from "types";
 import { TeasProps } from "types";
+//Context
+import { useSearchTeasContext } from "context/SearchTeas";
 
 const MainPage = ({ teas }: TeasProps) => {
+  const { filterTeas } = useSearchTeasContext();
+
+  const filteredData = filterTeas(teas);
+
   return (
     <Flex flexDirection="column" alignItems="center" h="auto">
       <SearchBar teas={teas} />
@@ -17,7 +23,7 @@ const MainPage = ({ teas }: TeasProps) => {
         w="75%"
         h="auto"
       >
-        {teas.map((elem: ITeaTypes) => {
+        {filteredData.map((elem: ITeaTypes) => {
           return (
             <TeaCard
               key={elem.name}
