@@ -8,8 +8,6 @@ import CountryContainer from "components/molecules/CountryContainer";
 import { TeasProps } from "types";
 
 const SearchBar = ({ teas }: TeasProps) => {
-  const teasNames = teas.map((elem) => elem.name);
-
   return (
     <Grid
       bg="mainBeige"
@@ -17,13 +15,13 @@ const SearchBar = ({ teas }: TeasProps) => {
       w="70.5%"
       h="3rem"
       my="12"
-      boxShadow="0px 0px 5px rgba(0, 0, 0, 0.4)"
+      boxShadow="0px 0px 5px rgba(0, 0, 0, 0.3)"
       borderRadius="8px"
       templateColumns="repeat(3, 1fr)"
       justifyContent="center"
       alignContent="center"
     >
-      <SearchContainer teasNames={teasNames} />
+      <SearchContainer />
       <TypeContainer teas={teas} />
       <CountryContainer teas={teas} />
     </Grid>

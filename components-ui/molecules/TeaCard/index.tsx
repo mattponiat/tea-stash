@@ -23,7 +23,7 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
       mb="5.45rem"
       bg="mainBeige"
       borderRadius="8"
-      boxShadow="0px 0px 5px rgba(0, 0, 0, 0.4)"
+      boxShadow="0px 0px 5px rgba(0, 0, 0, 0.3)"
       _hover={{ boxShadow: "0px 0px 6px" }}
     >
       <Link href={`/${slug}`} passHref>
