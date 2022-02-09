@@ -34,8 +34,8 @@ const CountryContainer = ({ teas }: TeasProps) => {
           bg="white"
           w="100%"
           h="80%"
-          ml="8"
           borderRadius="8"
+          borderWidth="1px"
           boxShadow="0px 0px 1px rgba(0, 0, 0, 0.3)"
         >
           {currentCountry}
