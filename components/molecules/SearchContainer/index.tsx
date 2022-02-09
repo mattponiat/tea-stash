@@ -3,18 +3,22 @@ import { Flex, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 //Components
 import SearchLabel from "components-ui/atoms/SearchLabel";
+//Context
+import { useSearchTeasContext } from "context/SearchTeas";
 
-const SearchContainer = ({ teasNames }: { teasNames: string[] }) => {
+const SearchContainer = () => {
+  const { inputHandler } = useSearchTeasContext();
+
   return (
-    <Flex w="19rem" mx="auto" h="inherit" alignItems="center">
+    <Flex w="17rem" mx="auto" h="inherit" alignItems="center">
       <SearchLabel>Search</SearchLabel>
       <InputGroup h="80%">
         <Input
+          onChange={inputHandler}
           type="search"
           bg="white"
           w="100%"
           h="auto"
-          ml="8"
           borderRadius="8"
           boxShadow="0px 0px 1px rgba(0, 0, 0, 0.3)"
           focusBorderColor="secondaryGreen"
