@@ -22,6 +22,7 @@ const SearchContainer = () => {
           borderRadius="8"
           boxShadow="0px 0px 1px rgba(0, 0, 0, 0.3)"
           focusBorderColor="secondaryGreen"
+          fontWeight="bold"
         />
         <InputRightElement pointerEvents="none">
           <SearchIcon boxSize="1.2rem" />
