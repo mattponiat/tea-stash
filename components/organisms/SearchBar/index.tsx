@@ -11,11 +11,11 @@ const SearchBar = ({ teas }: TeasProps) => {
   return (
     <Grid
       bg="mainBeige"
-      minW="20rem"
+      minW="527px"
       w="70.5%"
       h="3rem"
       my="12"
-      boxShadow="0px 0px 5px rgba(0, 0, 0, 0.3)"
+      boxShadow="0px 0px 4px rgba(0, 0, 0, 0.3)"
       borderRadius="8px"
       templateColumns="repeat(3, 1fr)"
       justifyContent="center"
