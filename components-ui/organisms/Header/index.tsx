@@ -1,35 +1,40 @@
 //Chakra-ui
-import { Button, Grid } from "@chakra-ui/react";
+import { Box, Button, Grid } from "@chakra-ui/react";
 //Components
 import Logo from "components-ui/atoms/Logo";
 import NavBar from "components-ui/molecules/NavBar";
 
 const Header = () => {
   return (
-    <Grid
+    <Box
       as="header"
       w="100%"
       h="fit-content"
       p="6"
       boxShadow="0px 0px 1px"
       bg="mainBeige"
-      templateColumns="150px minmax(max-content, 100%) 150px"
-      placeItems="center"
     >
-      <Logo />
-      <NavBar />
-      <Button
-        fontSize="1.125rem"
-        bg="secondaryGreen"
-        color="white"
-        minWidth="auto"
-        ml="auto"
-        _hover={{ background: "#8ab18a" }}
-        _active={{ background: "secondaryGreen" }}
+      <Grid
+        m="auto"
+        maxW="73%"
+        templateColumns="150px minmax(max-content, 100%) 150px"
+        placeItems="center"
       >
-        Dark mode
-      </Button>
-    </Grid>
+        <Logo />
+        <NavBar />
+        <Button
+          fontSize="1.125rem"
+          bg="secondaryGreen"
+          color="white"
+          minWidth="auto"
+          ml="auto"
+          _hover={{ background: "#8ab18a" }}
+          _active={{ background: "secondaryGreen" }}
+        >
+          Dark mode
+        </Button>
+      </Grid>
+    </Box>
   );
 };
 
