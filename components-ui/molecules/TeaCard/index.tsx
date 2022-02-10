@@ -23,8 +23,11 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
       mb="5.45rem"
       bg="mainBeige"
       borderRadius="8"
-      boxShadow="0px 0px 5px rgba(0, 0, 0, 0.3)"
-      _hover={{ boxShadow: "0px 0px 6px" }}
+      boxShadow="0px 0px 4px rgba(0, 0, 0, 0.3)"
+      _hover={{
+        boxShadow: "0px 0px 6px rgba(0, 0, 0, 0.45)",
+        transition: "box-shadow, 0.15s ease-in-out",
+      }}
     >
       <Link href={`/${slug}`} passHref>
         <LinkOverlay>
@@ -36,15 +39,14 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
             width="300px"
             height="170px"
           />
-          <Flex flexDirection="column" p="3" h="49%" position="relative">
+          <Flex
+            flexDirection="column"
+            justifyContent="space-between"
+            p="3"
+            h="49%"
+          >
             <Label>{name}</Label>
-            <Grid
-              position="absolute"
-              bottom="0.75rem"
-              h="auto"
-              templateColumns="repeat(1, 1fr)"
-              alignContent="end"
-            >
+            <Grid h="auto" templateColumns="repeat(1, 1fr)">
               <Text>
                 Country of origin: <b>{country}</b>
               </Text>
