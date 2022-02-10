@@ -56,7 +56,7 @@ export const useSearchTeasContext = () => {
   const context = React.useContext(SearchTeasContext);
   if (!context) {
     throw new Error(
-      "useSearchTeasContext must be used withing a SearchTeasContextProvider"
+      "useSearchTeasContext must be used within a SearchTeasContextProvider"
     );
   }
   return context;
