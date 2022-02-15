@@ -1,11 +1,10 @@
 //Chakra-ui
 import { Flex, Grid } from "@chakra-ui/react";
 //Components
-import SearchBar from "components/organisms/SearchBar";
+import SearchBar from "components-ui/organisms/SearchBar";
 import TeaCard from "components-ui/molecules/TeaCard";
 //Types
-import { ITeaTypes } from "types";
-import { TeasProps } from "types";
+import { ITeaTypes, TeasProps } from "types";
 //Context
 import { useSearchTeasContext } from "context/SearchTeas";
 
