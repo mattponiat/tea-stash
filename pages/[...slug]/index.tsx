@@ -1,28 +1,32 @@
 import Head from "next/head";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+//MDX
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote } from "next-mdx-remote";
 //Apollo client
 import { gql } from "@apollo/client";
 import client from "apolloClient";
 //Chakra-ui
-import { Box, Fade, Heading, Text, useDisclosure } from "@chakra-ui/react";
+import { Fade, useDisclosure } from "@chakra-ui/react";
 //Types
 import { ITeaTypes } from "types";
 import { ParsedUrlQuery } from "querystring";
+//Components
+import TeaInfoCard from "components-ui/molecules/TeaInfoCard";
 
-const TeaPage: NextPage<{ tea: ITeaTypes }> = ({ tea }) => {
+const TeaPage: NextPage<{
+  tea: ITeaTypes;
+  source: { compiledSource: string };
+}> = ({ tea, source }) => {
   const { isOpen } = useDisclosure();
+
   return (
     <Fade in={isOpen === false}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Teas - {tea.name}</title>
       </Head>
-      <Box minH="auto">
-        <Heading>{tea.name}</Heading>
-        <Text fontSize="18px">
-          Type of the tea: <b>{tea.typeOfTea.name}</b>
-        </Text>
-      </Box>
+      <TeaInfoCard teas={tea} markdown={<MDXRemote {...source} />} />
     </Fade>
   );
 };
@@ -82,7 +86,9 @@ export const getStaticProps: GetStaticProps = async ({
   const { teas } = data;
   const tea = teas[0];
 
-  return { props: { tea } };
+  const source = await serialize(tea.description);
+
+  return { props: { tea, source }, revalidate: 86400 };
 };
 
 export default TeaPage;
