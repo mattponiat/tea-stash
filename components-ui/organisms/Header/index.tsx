@@ -13,6 +13,7 @@ const Header = () => {
       p="6"
       boxShadow="0px 0px 1px"
       bg="mainBeige"
+      position="sticky"
     >
       <Grid
         m="auto"
