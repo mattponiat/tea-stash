@@ -25,7 +25,7 @@ const TypeContainer = ({ teas }: TeasProps) => {
   );
 
   return (
-    <Flex w="17rem" mx="auto" h="inherit" alignItems="center">
+    <Flex w="17rem" mx="auto" h="3rem" alignItems="center">
       <SearchLabel>Type</SearchLabel>
       <Menu matchWidth>
         <MenuButton
@@ -34,6 +34,7 @@ const TypeContainer = ({ teas }: TeasProps) => {
           bg="white"
           w="100%"
           h="80%"
+          ml="12px"
           borderRadius="8"
           borderWidth="1px"
           boxShadow="0px 0px 1px rgba(0, 0, 0, 0.3)"
