@@ -14,6 +14,7 @@ const Header = () => {
       boxShadow="0px 0px 1px"
       bg="mainBeige"
       position="sticky"
+      zIndex={1}
     >
       <Grid
         m="auto"
