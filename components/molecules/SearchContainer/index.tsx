@@ -16,6 +16,7 @@ const SearchContainer = () => {
         <Input
           onChange={inputHandler}
           type="search"
+          placeholder="e.g. Sencha"
           bg="white"
           w="100%"
           h="auto"
