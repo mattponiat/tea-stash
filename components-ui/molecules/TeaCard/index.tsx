@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 //Chakra-ui
 import { Flex, Grid, LinkBox, LinkOverlay } from "@chakra-ui/react";
-import styled from "@emotion/styled";
 //Components
 import Label from "components-ui/atoms/Label";
 import Text from "components-ui/atoms/Text";
@@ -23,6 +22,7 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
       mb="5.45rem"
       bg="mainBeige"
       borderRadius="8"
+      overflow="hidden"
       boxShadow="rgba(0, 0, 0, 0.2) 0px 2px 4px;"
       transition="box-shadow, 0.2s ease-in-out"
       _hover={{
@@ -32,13 +32,15 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
     >
       <Link href={`/${slug}`} passHref>
         <LinkOverlay>
-          <ImageStyled
+          <Image
             src={image}
             alt={name}
             layout="responsive"
             objectFit="cover"
             width="300px"
             height="170px"
+            sizes="0.1vw"
+            priority
           />
           <Flex
             flexDirection="column"
@@ -61,9 +63,4 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
     </LinkBox>
   );
 };
-
-const ImageStyled = styled(Image)`
-  border-radius: 8px;
-`;
-
 export default TeaCard;
