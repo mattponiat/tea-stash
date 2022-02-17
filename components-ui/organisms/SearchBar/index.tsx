@@ -16,9 +16,9 @@ const SearchBar = ({ teas }: TeasProps) => {
       minH="3rem"
       h="auto"
       my="12"
-      boxShadow="0px 0px 4px rgba(0, 0, 0, 0.3)"
+      boxShadow="rgba(0, 0, 0, 0.2) 0px 1px 4px;"
       borderRadius="8px"
-      templateColumns="repeat(auto-fit, minmax(330px, 1fr))"
+      templateColumns="repeat(auto-fit, minmax(282px, 1fr))"
       justifyContent="center"
       alignContent="center"
     >

@@ -23,7 +23,7 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
       mb="5.45rem"
       bg="mainBeige"
       borderRadius="8"
-      boxShadow="rgba(0, 0, 0, 0.18) 0px 2px 4px;"
+      boxShadow="rgba(0, 0, 0, 0.2) 0px 2px 4px;"
       transition="box-shadow, 0.2s ease-in-out"
       _hover={{
         boxShadow: "0px 2px 7px  rgba(0,0,0,0.25)",

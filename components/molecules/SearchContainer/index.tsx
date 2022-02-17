@@ -18,7 +18,7 @@ const SearchContainer = () => {
           type="search"
           placeholder="e.g. Sencha"
           bg="white"
-          w="100%"
+          w="12.07125rem"
           h="auto"
           ml="12px"
           borderRadius="8"

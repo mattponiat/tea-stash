@@ -16,7 +16,7 @@ const MoreInfo = ({ teas }: { teas: ITeaTypes }) => {
       mb="16"
       bg="mainBeige"
       borderRadius="8px"
-      boxShadow="0px 0px 4px rgba(0, 0, 0, 0.3)"
+      boxShadow="rgba(0, 0, 0, 0.2) 0px 1px 4px;"
     >
       <SpanStyled>
         Type: <b>{teas.typeOfTea.name}</b>
