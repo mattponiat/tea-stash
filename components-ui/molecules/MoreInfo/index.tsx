@@ -1,47 +1,27 @@
 //Chakra-ui
-import { Grid } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 //Types
 import { ITeaTypes } from "types";
 
 const MoreInfo = ({ teas }: { teas: ITeaTypes }) => {
   return (
-    <Grid
-      templateColumns="repeat(auto-fit, minmax(160px, 1fr))"
-      placeItems="center"
-      h="fit-content"
-      minH="3.7rem"
-      w="80%"
-      mt="44"
-      mb="16"
-      bg="mainBeige"
-      borderRadius="8px"
-      boxShadow="rgba(0, 0, 0, 0.2) 0px 1px 4px;"
-    >
+    <Flex flexDirection="column" minH="auto">
       <SpanStyled>
-        Type: <b>{teas.typeOfTea.name}</b>
+        {teas.typeOfTea.name} tea from{" "}
+        {teas.city ? `${teas.city}, ${teas.country}` : teas.country}
       </SpanStyled>
-      <SpanStyled>
-        Country: <b>{teas.country}</b>
-      </SpanStyled>
-      <SpanStyled>
-        City: <b>{teas.city ?? "-"}</b>
-      </SpanStyled>
-      <SpanStyled>
-        Harvest Date: <b>{teas.harvestDate ?? "-"}</b>
-      </SpanStyled>
-      <SpanStyled>
-        Price: <b>{teas.price}$</b>
-      </SpanStyled>
-    </Grid>
+      {teas.harvestDate ? (
+        <SpanStyled>Harvested in {teas.harvestDate ?? "-"}</SpanStyled>
+      ) : null}
+      <SpanStyled>Sold for {teas.price}$</SpanStyled>
+    </Flex>
   );
 };
-
 const SpanStyled = styled.span`
   width: fit-content;
   height: fit-content;
-  margin: 3px 10px 3px 13px;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
 `;
 
 export default MoreInfo;
