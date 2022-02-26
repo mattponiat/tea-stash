@@ -4,7 +4,7 @@ import { Box } from "@chakra-ui/react";
 
 const SearchLabel = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Box minH="auto" w="100px" textAlign="center">
+    <Box w="58px" minW="58px" textAlign="right" mr="3">
       <SpanStyled>{children}</SpanStyled>
     </Box>
   );
