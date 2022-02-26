@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 //Chakra-ui
-import { Flex, Grid, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import { Box, Flex, LinkBox } from "@chakra-ui/react";
 //Components
 import Label from "components-ui/atoms/Label";
 import Text from "components-ui/atoms/Text";
@@ -16,51 +16,57 @@ interface TeaCardProps {
 
 const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
   return (
-    <LinkBox
-      w="17rem"
-      h="19rem"
-      mb="5.45rem"
-      bg="mainBeige"
-      borderRadius="8"
-      overflow="hidden"
-      boxShadow="rgba(0, 0, 0, 0.2) 0px 2px 4px;"
-      transition="box-shadow, 0.2s ease-in-out"
-      _hover={{
-        boxShadow: "0px 2px 7px  rgba(0,0,0,0.25)",
-        transform: "translateY(-2px)",
-      }}
-    >
-      <Link href={`/${slug}`} passHref>
-        <LinkOverlay>
+    <Link href={`/${slug}`} passHref>
+      <LinkBox
+        as="a"
+        display="flex"
+        flexDirection="column"
+        maxH="fit-content"
+        minH="335px"
+        minW="315px"
+        bg="mainBeige"
+        borderRadius="8"
+        boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"
+        transition="box-shadow 0.2s, transform 0.2s"
+        overflow="hidden"
+        _hover={{
+          boxShadow: "0px 2px 7px  rgba(0,0,0,0.25)",
+          transform: "translateY(-2px)",
+        }}
+        _focusVisible={{
+          boxShadow: "0px 2px 4pxrgba(0, 0, 0, 0.2)",
+          transform: "translateY(-2px)",
+        }}
+      >
+        <Box maxW="inherit">
           <Image
             src={image}
             alt={name}
             layout="responsive"
             objectFit="cover"
-            width="300px"
-            height="170px"
-            sizes="0.1vw"
+            width="180px"
+            height="90px"
             priority
           />
-          <Flex
-            flexDirection="column"
-            justifyContent="space-between"
-            p="3"
-            minH="49.4%"
-          >
-            <Label>{name}</Label>
-            <Grid templateColumns="1fr">
-              <Text>
-                Country of origin: <b>{country}</b>
-              </Text>
-              <Text>
-                Type of tea: <b>{type}</b>
-              </Text>
-            </Grid>
+        </Box>
+        <Flex
+          flexDirection="column"
+          justifyContent="space-between"
+          h="100%"
+          p="3"
+        >
+          <Label>{name}</Label>
+          <Flex flexDirection="column">
+            <Text>
+              Country of origin: <b>{country}</b>
+            </Text>
+            <Text>
+              Type of tea: <b>{type}</b>
+            </Text>
           </Flex>
-        </LinkOverlay>
-      </Link>
-    </LinkBox>
+        </Flex>
+      </LinkBox>
+    </Link>
   );
 };
 export default TeaCard;

@@ -11,16 +11,14 @@ const SearchBar = ({ teas }: TeasProps) => {
   return (
     <Grid
       bg="mainBeige"
-      minW="350px"
-      w="70.5%"
-      minH="3rem"
-      h="auto"
-      my="12"
+      maxW="100%"
+      minW="320px"
+      p="1"
       boxShadow="rgba(0, 0, 0, 0.2) 0px 1px 4px;"
       borderRadius="8px"
-      templateColumns="repeat(auto-fit, minmax(282px, 1fr))"
-      justifyContent="center"
-      alignContent="center"
+      templateColumns="repeat(auto-fit, minmax(290px, 1fr))"
+      autoRows="1fr"
+      placeItems="center"
     >
       <SearchContainer />
       <TypeContainer teas={teas} />
