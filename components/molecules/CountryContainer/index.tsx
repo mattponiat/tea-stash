@@ -25,16 +25,20 @@ const CountryContainer = ({ teas }: TeasProps) => {
   );
 
   return (
-    <Flex w="17rem" mx="auto" h="3rem" alignItems="center">
+    <Flex
+      maxW="fit-content"
+      mx="auto"
+      minH="3rem"
+      alignItems="center"
+      justifyContent="space-between"
+    >
       <SearchLabel>Country</SearchLabel>
       <Menu matchWidth>
         <MenuButton
           as={Button}
           rightIcon={<ChevronDownIcon boxSize="1.45rem" />}
           bg="white"
-          w="100%"
-          h="80%"
-          ml="12px"
+          minW="206px"
           borderRadius="8"
           borderWidth="1px"
           boxShadow="0px 0px 1px rgba(0, 0, 0, 0.3)"

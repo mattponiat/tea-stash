@@ -10,17 +10,21 @@ const SearchContainer = () => {
   const { inputHandler } = useSearchTeasContext();
 
   return (
-    <Flex w="17rem" mx="auto" h="3rem" alignItems="center">
+    <Flex
+      mx="auto"
+      minH="3rem"
+      maxW="fit-content"
+      alignItems="center"
+      justifyContent="space-betweeen"
+    >
       <SearchLabel>Search</SearchLabel>
-      <InputGroup h="80%">
+      <InputGroup>
         <Input
           onChange={inputHandler}
           type="search"
           placeholder="e.g. Sencha"
           bg="white"
-          w="12.07125rem"
-          h="auto"
-          ml="12px"
+          maxW="206px"
           borderRadius="8"
           boxShadow="0px 0px 1px rgba(0, 0, 0, 0.3)"
           focusBorderColor="secondaryGreen"
