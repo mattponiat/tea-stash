@@ -24,12 +24,11 @@ const TeaInfoCard = ({
         alignItems="center"
         bg="white"
       >
-        <Title teas={teas} />
         <Grid
           h="auto"
           mt="10"
           gap="10"
-          templateColumns={"20rem 1fr"}
+          templateColumns={"450px 1fr"}
           bg="white"
         >
           <Image
@@ -38,12 +37,14 @@ const TeaInfoCard = ({
             objectFit="contain"
             width="250px"
             height="300px"
+            priority
           />
-          <Desc markdown={markdown} />
+          <Flex flexDirection="column" gap="15px" p="3">
+            <Title teas={teas} />
+            <MoreInfo teas={teas} />
+            <Desc markdown={markdown} />
+          </Flex>
         </Grid>
-        <Flex justifyContent="center" minH="auto" w="100%" bg="white">
-          <MoreInfo teas={teas} />
-        </Flex>
       </Flex>
     </Flex>
   );
