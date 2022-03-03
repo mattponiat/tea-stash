@@ -1,5 +1,4 @@
 import type { AppProps } from "next/app";
-import "focus-visible/dist/focus-visible";
 //Fonts
 import "@fontsource/nunito";
 //Custom theme
