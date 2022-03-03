@@ -6,7 +6,7 @@ import { ITeaTypes } from "types";
 
 const MoreInfo = ({ teas }: { teas: ITeaTypes }) => {
   return (
-    <Flex flexDirection="column" minH="auto">
+    <Flex flexDirection="column" maxW="100%" minH="auto">
       <SpanStyled>
         {teas.typeOfTea.name} tea from{" "}
         {teas.city ? `${teas.city}, ${teas.country}` : teas.country}
@@ -18,9 +18,8 @@ const MoreInfo = ({ teas }: { teas: ITeaTypes }) => {
     </Flex>
   );
 };
+
 const SpanStyled = styled.span`
-  width: fit-content;
-  height: fit-content;
   font-size: 1.5rem;
 `;
 

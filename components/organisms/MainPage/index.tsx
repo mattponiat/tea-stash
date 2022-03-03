@@ -16,27 +16,14 @@ const MainPage = ({ teas }: TeasProps) => {
   const { width, height } = useWindowSize();
 
   return (
-    <Flex
-      flexDirection="column"
-      alignItems="center"
-      maxW={width}
-      minH={height - 88}
-    >
-      <Grid
-        templateColumns="1fr"
-        maxW="1420px"
-        minW="75%"
-        mx="2"
-        mt="12"
-        mb="10"
-      >
+    <Flex flexDirection="column" alignItems="center" maxW={width} minH={height}>
+      <Flex flexDirection="column" maxW="1440px" w="95%" my="12">
         <SearchBar teas={teas} />
         <Grid
           templateColumns="repeat(auto-fill, minmax(313px, 1fr))"
-          autoRows="1fr"
+          gridColumn="1 / -1"
           gap="14"
-          maxW="100%"
-          mt="12"
+          w="100%"
         >
           {filteredData.map((elem: ITeaTypes) => {
             return (
@@ -51,7 +38,7 @@ const MainPage = ({ teas }: TeasProps) => {
             );
           })}
         </Grid>
-      </Grid>
+      </Flex>
     </Flex>
   );
 };

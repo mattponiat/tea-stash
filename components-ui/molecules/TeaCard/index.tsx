@@ -19,11 +19,12 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
     <Link href={`/${slug}`} passHref>
       <LinkBox
         as="a"
+        draggable="false"
         display="flex"
         flexDirection="column"
         maxH="fit-content"
-        minH="335px"
-        minW="315px"
+        minH="320px"
+        minW="auto"
         bg="mainBeige"
         borderRadius="8"
         boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"
@@ -33,19 +34,19 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
           boxShadow: "0px 2px 7px  rgba(0,0,0,0.25)",
           transform: "translateY(-2px)",
         }}
-        _focusVisible={{
+        _focus={{
           boxShadow: "0px 2px 4pxrgba(0, 0, 0, 0.2)",
           transform: "translateY(-2px)",
         }}
       >
-        <Box maxW="inherit">
+        <Box maxW="100%">
           <Image
             src={image}
             alt={name}
             layout="responsive"
             objectFit="cover"
-            width="180px"
-            height="90px"
+            width="100px"
+            height="50px"
             priority
           />
         </Box>

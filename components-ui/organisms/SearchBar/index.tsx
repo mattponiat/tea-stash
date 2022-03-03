@@ -13,6 +13,7 @@ const SearchBar = ({ teas }: TeasProps) => {
       bg="mainBeige"
       maxW="100%"
       minW="320px"
+      mb="12"
       p="1"
       boxShadow="rgba(0, 0, 0, 0.2) 0px 1px 4px;"
       borderRadius="8px"
