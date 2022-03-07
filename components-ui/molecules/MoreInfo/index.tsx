@@ -1,26 +1,21 @@
 //Chakra-ui
-import { Flex } from "@chakra-ui/react";
-import styled from "@emotion/styled";
+import { Flex, Heading } from "@chakra-ui/react";
 //Types
 import { ITeaTypes } from "types";
 
 const MoreInfo = ({ teas }: { teas: ITeaTypes }) => {
   return (
-    <Flex flexDirection="column" maxW="100%" minH="auto">
-      <SpanStyled>
-        {teas.typeOfTea.name} tea from{" "}
-        {teas.city ? `${teas.city}, ${teas.country}` : teas.country}
-      </SpanStyled>
+    <Flex flexDirection="column" maxW="100%" color="blackAlpha.800">
       {teas.harvestDate ? (
-        <SpanStyled>Harvested in {teas.harvestDate ?? "-"}</SpanStyled>
+        <Heading as="h3" size="md" mb="2">
+          Harvested in {teas.harvestDate ?? "-"}
+        </Heading>
       ) : null}
-      <SpanStyled>Sold for {teas.price}$</SpanStyled>
+      <Heading as="h3" size="md">
+        Sold for {teas.price}$
+      </Heading>
     </Flex>
   );
 };
-
-const SpanStyled = styled.span`
-  font-size: 1.5rem;
-`;
 
 export default MoreInfo;
