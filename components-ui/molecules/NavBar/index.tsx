@@ -1,22 +1,21 @@
 //Chakra-ui
-import { Container } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 //Components
 import StyledLink from "components-ui/atoms/StyledLink";
 
-const NavBar: React.FC = () => {
+const NavBar = () => {
   return (
-    <Container
+    <Grid
       as="nav"
-      h="inherit"
-      minWidth="13rem"
-      p="1"
-      display="flex"
-      justifyContent="center"
+      maxW="350px"
+      w="100%"
+      templateColumns="repeat(3, max-content)"
+      justifyContent="space-between"
     >
       <StyledLink href="/">Teas</StyledLink>
       <StyledLink href="/vendors">Vendors</StyledLink>
       <StyledLink href="/about">About</StyledLink>
-    </Container>
+    </Grid>
   );
 };
 export default NavBar;

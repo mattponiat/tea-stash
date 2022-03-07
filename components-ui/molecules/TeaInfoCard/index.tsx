@@ -24,7 +24,7 @@ const TeaInfoCard = ({
       <Flex
         minH="100%"
         maxW="1440px"
-        w="95%"
+        w="100%"
         flexDirection="column"
         alignItems="center"
         bg="white"
