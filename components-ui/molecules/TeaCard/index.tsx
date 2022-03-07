@@ -5,6 +5,7 @@ import { Box, Flex, LinkBox } from "@chakra-ui/react";
 //Components
 import Label from "components-ui/atoms/Label";
 import Text from "components-ui/atoms/Text";
+import styled from "@emotion/styled";
 
 interface TeaCardProps {
   name: string;
@@ -17,7 +18,7 @@ interface TeaCardProps {
 const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
   return (
     <Link href={`/${slug}`} passHref>
-      <LinkBox
+      <Wrapper
         as="a"
         draggable="false"
         display="flex"
@@ -66,8 +67,15 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
             </Text>
           </Flex>
         </Flex>
-      </LinkBox>
+      </Wrapper>
     </Link>
   );
 };
+
+const Wrapper = styled(LinkBox)`
+  :focus:not([data-focus-visible-added]) {
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+  }
+`;
+
 export default TeaCard;
