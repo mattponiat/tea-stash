@@ -12,9 +12,8 @@ export const customTheme = extendTheme({
     body: "nunito",
   },
   colors: {
-    // mainBeige: "#FFF7E7",
-    mainBeige: "#fffaf0",
-    secondaryGreen: "#749B74",
+    mainBeige: "#FFF7E7",
+    secondaryGreen: "#497a36",
   },
   components: {
     Menu,
