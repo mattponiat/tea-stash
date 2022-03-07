@@ -1,7 +1,7 @@
 //Components
-import Header from "components-ui/organisms/Header";
+import Header from "components/organisms/Header";
 
-const Layout: React.FC = ({ children }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Header />
