@@ -30,7 +30,7 @@ const SearchContainer = () => {
           focusBorderColor="secondaryGreen"
           fontWeight="bold"
         />
-        <InputRightElement pointerEvents="none">
+        <InputRightElement pointerEvents="none" zIndex={0}>
           <SearchIcon boxSize="1.2rem" />
         </InputRightElement>
       </InputGroup>
