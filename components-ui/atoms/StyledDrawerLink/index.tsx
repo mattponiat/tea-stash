@@ -17,7 +17,7 @@ const StyledDrawerLink = ({ onClose, href, children }: DrawerLinkTypes) => {
         minW="65%"
         p="35px"
         my="30"
-        bg="transparent"
+        bg="mainBeige"
         boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"
         fontSize="1.75rem"
         _hover={{ background: "none", color: "secondaryGreen" }}
