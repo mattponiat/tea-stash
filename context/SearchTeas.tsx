@@ -7,6 +7,7 @@ const SearchTeas = () => {
   const [currentType, setCurrentType] = React.useState("Any");
   const [inputText, setInputText] = React.useState("");
 
+  //Set the country and type whenever they change
   React.useEffect(() => {
     setCurrentCountry(currentCountry);
     setCurrentType(currentType);
@@ -17,6 +18,7 @@ const SearchTeas = () => {
     setInputText(lowerCase);
   };
 
+  //Function for the SearchBar to filter teas
   const filterTeas = (teas: Teas) => {
     let result = teas;
 
@@ -45,12 +47,10 @@ const SearchTeas = () => {
   };
 };
 
-//Context
+//React Context
 type UseSearchTeasType = ReturnType<typeof SearchTeas>;
 
 const SearchTeasContext = React.createContext<UseSearchTeasType | null>(null);
-
-// export const useSearchTeasContext = () => React.useContext(SearchTeasContext)!;
 
 export const useSearchTeasContext = () => {
   const context = React.useContext(SearchTeasContext);
