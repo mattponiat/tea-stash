@@ -21,7 +21,7 @@ const CountryContainer = ({ teas }: TeasProps) => {
 
   const uniqueArray = teas.filter(
     (value, index, array) =>
-      array.findIndex((t) => t.country === value.country) === index
+      array.findIndex((t) => t.country.name === value.country.name) === index
   );
 
   return (
@@ -49,13 +49,13 @@ const CountryContainer = ({ teas }: TeasProps) => {
           <MenuItem value="Any" onClick={() => setCurrentCountry("Any")}>
             Any
           </MenuItem>
-          {uniqueArray.map((elem, index) => (
+          {uniqueArray.map((elem) => (
             <MenuItem
-              key={index + 1}
-              value={elem.country}
-              onClick={() => setCurrentCountry(elem.country)}
+              key={elem.country.name}
+              value={elem.country.name}
+              onClick={() => setCurrentCountry(elem.country.name)}
             >
-              {elem.country}
+              {elem.country.name}
             </MenuItem>
           ))}
         </MenuList>

@@ -9,7 +9,7 @@ const Title = ({ teas }: { teas: ITeaTypes }) => {
       </Heading>
       <Heading as="h2" size="lg" color="GrayText" mt="2">
         {teas.typeOfTea.name} tea from{" "}
-        {teas.city ? `${teas.city}, ${teas.country}` : teas.country}
+        {teas.city ? `${teas.city}, ${teas.country.name}` : teas.country.name}
       </Heading>
     </Flex>
   );

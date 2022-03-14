@@ -30,7 +30,7 @@ const MainPage = ({ teas }: TeasProps) => {
               <TeaCard
                 key={elem.name}
                 name={elem.name}
-                country={elem.country}
+                country={elem.country.name}
                 type={elem.typeOfTea.name}
                 image={elem.image.url}
                 slug={elem.slug}

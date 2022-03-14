@@ -34,7 +34,9 @@ export const getStaticProps: GetStaticProps = async () => {
       query {
         teas {
           name
-          country
+          country {
+            name
+          }
           image {
             url
           }

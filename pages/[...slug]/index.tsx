@@ -67,7 +67,9 @@ export const getStaticProps: GetStaticProps = async ({
           name
           slug
           description
-          country
+          country {
+            name
+          }
           city
           harvestDate
           price

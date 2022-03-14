@@ -46,7 +46,7 @@ const SearchTeas = () => {
       result = result.filter((tea) => tea.typeOfTea.name === currentType);
     }
     if (currentCountry != "Any") {
-      result = result.filter((tea) => tea.country === currentCountry);
+      result = result.filter((tea) => tea.country.name === currentCountry);
     }
     if (inputText) {
       result = result.filter((tea) =>

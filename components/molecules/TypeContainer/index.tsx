@@ -49,9 +49,9 @@ const TypeContainer = ({ teas }: TeasProps) => {
           <MenuItem value="Any" onClick={() => setCurrentType("Any")}>
             Any
           </MenuItem>
-          {uniqueArray.map((elem, index) => (
+          {uniqueArray.map((elem) => (
             <MenuItem
-              key={index + 1}
+              key={elem.typeOfTea.name}
               value={elem.typeOfTea.name}
               onClick={() => setCurrentType(elem.typeOfTea.name)}
             >

@@ -2,7 +2,9 @@ export interface ITeaTypes {
   name: string;
   slug: string;
   description: string;
-  country: string;
+  country: {
+    name: string;
+  };
   city: string;
   harvestDate: string;
   price: number;
