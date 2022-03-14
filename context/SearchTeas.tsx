@@ -13,6 +13,26 @@ const SearchTeas = () => {
     setCurrentType(currentType);
   }, [currentCountry, currentType]);
 
+  //Get country and type from session storage
+  React.useEffect(() => {
+    const countryData = sessionStorage.getItem("country");
+    const typeData = sessionStorage.getItem("type");
+
+    if (countryData) {
+      setCurrentCountry(countryData);
+    }
+    if (typeData) {
+      setCurrentType(typeData);
+    }
+  }, []);
+
+  //Set country and type to session storage
+  React.useEffect(() => {
+    sessionStorage.setItem("country", currentCountry);
+    sessionStorage.setItem("type", currentType);
+  }, [currentCountry, currentType]);
+
+  //Input handler
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const lowerCase = e.currentTarget.value.toLowerCase();
     setInputText(lowerCase);
