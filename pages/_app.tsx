@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 //Fonts
 import "@fontsource/nunito";
 //Custom theme
-import { customTheme } from "customTheme";
+import { theme } from "theme";
 //Global styles
 import { GlobalStyles } from "GlobalStyles";
 import { Global } from "@emotion/react";
@@ -14,7 +14,7 @@ import Layout from "components-ui/organisms/Layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={customTheme}>
+    <ChakraProvider theme={theme}>
       <Global styles={GlobalStyles} />
       <CSSReset />
       <Layout>

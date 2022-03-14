@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { theme } from "theme";
 
 export const GlobalStyles = css`
   *,
@@ -20,7 +21,7 @@ export const GlobalStyles = css`
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #497a36;
+    background-color: ${theme.colors.secondaryGreen[500]};
   }
 
   //Scroll background styles
