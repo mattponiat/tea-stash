@@ -16,12 +16,12 @@ const StyledDrawerLink = ({ onClose, href, children }: DrawerLinkTypes) => {
         onClick={onClose}
         minW="65%"
         p="35px"
-        my="30"
         bg="mainBeige"
         boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"
-        fontSize="1.75rem"
-        _hover={{ background: "none", color: "secondaryGreen" }}
-        _active={{ color: "#619b47" }}
+        borderRadius="8"
+        fontSize="1.625rem"
+        _hover={{ color: "secondaryGreen.500" }}
+        _active={{ color: "secondaryGreen.400" }}
       >
         {children}
       </StyledButton>

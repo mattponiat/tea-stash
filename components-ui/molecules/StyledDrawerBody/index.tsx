@@ -10,6 +10,7 @@ const StyledDrawerBody = ({ onClose }: { onClose: () => void }) => {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
+      gap="4rem"
     >
       <StyledDrawerLink href="/" onClose={onClose}>
         Teas

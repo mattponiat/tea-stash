@@ -3,7 +3,7 @@ import { Heading } from "@chakra-ui/react";
 
 export const Label = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Heading fontSize="1.625rem" color="secondaryGreen" fontWeight="900">
+    <Heading fontSize="1.625rem" color="secondaryGreen.500" fontWeight="900">
       {children}
     </Heading>
   );

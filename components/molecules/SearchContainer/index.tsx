@@ -27,7 +27,7 @@ const SearchContainer = () => {
           maxW="206px"
           borderRadius="8"
           boxShadow="0px 0px 1px rgba(0, 0, 0, 0.3)"
-          focusBorderColor="secondaryGreen"
+          focusBorderColor="secondaryGreen.500"
           fontWeight="bold"
         />
         <InputRightElement pointerEvents="none" zIndex={0}>

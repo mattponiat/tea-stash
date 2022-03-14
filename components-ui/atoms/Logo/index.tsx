@@ -12,7 +12,7 @@ const Logo = () => {
           p="0"
           fontWeight="black"
           fontSize="2rem"
-          _hover={{ background: "none", color: "secondaryGreen" }}
+          _hover={{ background: "none", color: "secondaryGreen.500" }}
           _active={{ background: "none", outline: "none", boxShadow: "none" }}
         >
           <SpanStyled>tea</SpanStyled>
@@ -24,7 +24,7 @@ const Logo = () => {
 };
 
 const SpanStyled = styled.span`
-  color: #497a36;
+  color: ${({ theme }) => theme.colors.secondaryGreen[500]};
 `;
 
 export default Logo;

@@ -65,7 +65,7 @@ const Header = () => {
                   onClick={onOpen}
                   aria-label="Navbar"
                   icon={<HamburgerIcon />}
-                  color="secondaryGreen"
+                  color="secondaryGreen.500"
                   bg="none"
                   border="none"
                   p="0"
@@ -97,7 +97,7 @@ const Header = () => {
                     justifyContent="start"
                     alignItems="center"
                   >
-                    <TeaIcon boxSize="5rem" fill="secondaryGreen" />
+                    <TeaIcon boxSize="5rem" fill="secondaryGreen.500" />
                     <Text ml="1" mt="3" fontSize="28px">
                       Welcome!
                     </Text>
