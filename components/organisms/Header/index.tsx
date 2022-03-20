@@ -68,7 +68,7 @@ const Header = () => {
                 <IconButton
                   ref={btnRef.current}
                   onClick={onOpen}
-                  aria-label="Navbar"
+                  aria-label="Open Navbar"
                   icon={<HamburgerIcon />}
                   color="secondaryGreen.500"
                   bg="none"
