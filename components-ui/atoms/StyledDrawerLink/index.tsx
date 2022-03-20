@@ -11,6 +11,7 @@ interface DrawerLinkTypes {
 
 const StyledDrawerLink = ({ onClose, href, children }: DrawerLinkTypes) => {
   const bg = useColorModeValue("mainBeige", "darkMode.main");
+
   return (
     <Link href={href} passHref>
       <StyledButton

@@ -16,7 +16,7 @@ const StyledSunIcon = () => {
       aria-label={
         colorMode === "light" ? "Toggle dark mode" : "Toggle light mode"
       }
-      icon={colorMode === "light" ? <SunIcon /> : <MoonIcon />}
+      icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
       onClick={toggleColorMode}
     />
   );
