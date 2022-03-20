@@ -23,9 +23,17 @@ const theme = extendTheme({
       200: "#afd5a0",
       100: "#d3e8ca",
     },
+    darkMode: {
+      main: "#2d3748",
+      hover: "#424b5a",
+    },
   },
   components: {
     Menu,
+  },
+  config: {
+    initialColorMode: "light",
+    useSystemColorMode: true,
   },
 });
 
