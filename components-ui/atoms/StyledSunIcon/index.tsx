@@ -1,9 +1,11 @@
 //Chakra-ui
-import { IconButton } from "@chakra-ui/react";
+import { IconButton, useColorMode } from "@chakra-ui/react";
 //Icons
-import { SunIcon } from "@chakra-ui/icons";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
 const StyledSunIcon = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <IconButton
       bg="secondaryGreen.500"
@@ -11,8 +13,11 @@ const StyledSunIcon = () => {
       fontSize="20px"
       _hover={{ background: "secondaryGreen.400" }}
       _active={{ background: "secondaryGreen.500" }}
-      aria-label="Dark mode"
-      icon={<SunIcon />}
+      aria-label={
+        colorMode === "light" ? "Toggle dark mode" : "Toggle light mode"
+      }
+      icon={colorMode === "light" ? <SunIcon /> : <MoonIcon />}
+      onClick={toggleColorMode}
     />
   );
 };

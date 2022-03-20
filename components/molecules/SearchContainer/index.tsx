@@ -1,5 +1,11 @@
 //Chakra-ui
-import { Flex, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
+import {
+  Flex,
+  Input,
+  InputGroup,
+  InputRightElement,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 //Components
 import SearchLabel from "components-ui/atoms/SearchLabel";
@@ -8,6 +14,8 @@ import { useSearchTeasContext } from "context/SearchTeas";
 
 const SearchContainer = () => {
   const { inputHandler } = useSearchTeasContext();
+
+  const bg = useColorModeValue("white", "darkMode.main");
 
   return (
     <Flex
@@ -23,7 +31,7 @@ const SearchContainer = () => {
           onChange={inputHandler}
           type="search"
           placeholder="e.g. Sencha"
-          bg="white"
+          bg={bg}
           maxW="206px"
           borderRadius="8"
           boxShadow="0px 0px 1px rgba(0, 0, 0, 0.3)"

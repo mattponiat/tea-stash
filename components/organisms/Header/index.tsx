@@ -11,6 +11,7 @@ import {
   DrawerHeader,
   DrawerFooter,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 //Icons
@@ -28,8 +29,12 @@ const Header = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { width } = useWindowSize();
+
   const btnRef = React.useRef();
   const isSmall = width < 768;
+
+  const bg = useColorModeValue("mainBeige", "darkMode.main");
+  const bgDrawer = useColorModeValue("white", "gray.800");
 
   React.useEffect(() => {
     setIsLoading(false);
@@ -42,7 +47,7 @@ const Header = () => {
       justifyContent="center"
       maxW={width}
       minH="100px"
-      bg="mainBeige"
+      bg={bg}
       boxShadow="0px 0px 1px"
       zIndex={1}
     >
@@ -85,13 +90,10 @@ const Header = () => {
                 finalFocusRef={btnRef.current}
               >
                 <DrawerOverlay />
-                <StyledDrawerContent
-                  bg="white"
-                  boxShadow="0px -2px 10px inset rgba(0, 0, 0, 0.2)"
-                >
+                <StyledDrawerContent bg={bgDrawer} boxShadow="1px 0px 1px">
                   <DrawerHeader
-                    bg="mainBeige"
-                    boxShadow="0px 0px 1px"
+                    bg={bg}
+                    boxShadow="1px 0px 1px"
                     minH="100px"
                     display="flex"
                     justifyContent="start"

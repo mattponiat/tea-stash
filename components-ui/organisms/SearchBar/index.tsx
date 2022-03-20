@@ -1,5 +1,5 @@
 //Chakra-ui
-import { Grid } from "@chakra-ui/react";
+import { Grid, useColorModeValue } from "@chakra-ui/react";
 //Components
 import SearchContainer from "components/molecules/SearchContainer";
 import TypeContainer from "components/molecules/TypeContainer";
@@ -8,9 +8,11 @@ import CountryContainer from "components/molecules/CountryContainer";
 import { TeasProps } from "types";
 
 const SearchBar = ({ teas }: TeasProps) => {
+  const bg = useColorModeValue("mainBeige", "darkMode.main");
+
   return (
     <Grid
-      bg="mainBeige"
+      bg={bg}
       maxW="100%"
       minW="320px"
       mb="12"

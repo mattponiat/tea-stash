@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 //Chakra-ui
-import { Box, Flex, LinkBox } from "@chakra-ui/react";
+import { Box, Flex, LinkBox, useColorModeValue } from "@chakra-ui/react";
 //Components
 import Label from "components-ui/atoms/Label";
 import Text from "components-ui/atoms/Text";
@@ -16,6 +16,8 @@ interface TeaCardProps {
 }
 
 const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
+  const bg = useColorModeValue("mainBeige", "darkMode.main");
+
   return (
     <Link href={`/${slug}`} passHref>
       <Wrapper
@@ -26,7 +28,7 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
         maxH="fit-content"
         minH="320px"
         minW="auto"
-        bg="mainBeige"
+        bg={bg}
         borderRadius="8"
         boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"
         transition="box-shadow 0.2s, transform 0.2s"
