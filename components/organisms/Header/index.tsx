@@ -90,7 +90,7 @@ const Header = () => {
                 finalFocusRef={btnRef.current}
               >
                 <DrawerOverlay />
-                <StyledDrawerContent bg={bgDrawer} boxShadow="1px 0px 1px">
+                <StyledDrawerContent bg={bgDrawer}>
                   <DrawerHeader
                     bg={bg}
                     boxShadow="1px 0px 1px"
