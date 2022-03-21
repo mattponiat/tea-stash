@@ -125,7 +125,8 @@ const Header = () => {
 
 const StyledDrawerContent = styled(DrawerContent)`
   :focus:not([data-focus-visible-added]) {
-    box-shadow: 0px -2px 10px inset rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,
+      rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.4) 0px 15px 40px;
   }
 `;
 

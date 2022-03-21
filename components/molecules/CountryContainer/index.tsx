@@ -22,7 +22,7 @@ const CountryContainer = ({ teas }: TeasProps) => {
   const { currentCountry, setCurrentCountry } = useSearchTeasContext();
 
   const { colorMode } = useColorMode();
-  const bg = useColorModeValue("white", "darkMode.main");
+  const bg = useColorModeValue("white", "gray.800");
 
   const uniqueArray = teas.filter(
     (value, index, array) =>

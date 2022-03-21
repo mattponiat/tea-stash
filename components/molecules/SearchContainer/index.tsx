@@ -15,7 +15,7 @@ import { useSearchTeasContext } from "context/SearchTeas";
 const SearchContainer = () => {
   const { inputHandler } = useSearchTeasContext();
 
-  const bg = useColorModeValue("white", "darkMode.main");
+  const bg = useColorModeValue("white", "gray.800");
 
   return (
     <Flex
