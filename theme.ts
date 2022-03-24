@@ -32,8 +32,7 @@ const theme = extendTheme({
     Menu,
   },
   config: {
-    initialColorMode: "light",
-    useSystemColorMode: true,
+    initialColorMode: "system",
   },
 });
 
