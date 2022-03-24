@@ -1,7 +1,6 @@
 import Image from "next/image";
 //Chakra-ui
 import { Box, Flex, Grid, useColorModeValue } from "@chakra-ui/react";
-import styled from "@emotion/styled";
 //Components
 import Desc from "components-ui/atoms/Desc";
 import MoreInfo from "components-ui/molecules/MoreInfo";
@@ -24,7 +23,7 @@ const TeaInfoCard = ({
 
   return (
     <Flex
-      minH={height - 100}
+      minH={height}
       maxW={width}
       justifyContent="center"
       bg={width <= 1530 ? bg : ""}
@@ -44,7 +43,7 @@ const TeaInfoCard = ({
           maxW="1440px"
           w="100%"
           my="12"
-          gap="6"
+          gap={width <= 1150 ? "6" : "0"}
         >
           <Box
             w={width <= 1150 ? "100%" : "80%"}
@@ -55,15 +54,15 @@ const TeaInfoCard = ({
               src={teas.image.url}
               alt={teas.name}
               layout="responsive"
-              width="100"
-              height="85"
+              objectFit="cover"
+              width="90"
+              height="88"
               priority
             />
           </Box>
           <Flex
             flexDirection="column"
             alignItems="start"
-            justifyContent="center"
             maxW="100%"
             minH="100%"
             gap="6"
