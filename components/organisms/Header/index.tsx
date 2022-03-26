@@ -17,11 +17,11 @@ import styled from "@emotion/styled";
 //Icons
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { TeaIcon } from "icons/TeaIcon";
-import StyledSunIcon from "components-ui/atoms/StyledSunIcon";
 //Components
 import Logo from "components-ui/atoms/Logo";
 import NavBar from "components-ui/molecules/NavBar";
 import StyledDrawerBody from "components-ui/molecules/StyledDrawerBody";
+import StyledSunIcon from "components-ui/atoms/StyledSunIcon";
 //Hooks
 import { useWindowSize } from "usehooks-ts";
 
@@ -92,12 +92,12 @@ const Header = () => {
                 <DrawerOverlay />
                 <StyledDrawerContent bg={bgDrawer}>
                   <DrawerHeader
-                    bg={bg}
-                    boxShadow="1px 0px 1px"
-                    minH="100px"
                     display="flex"
                     justifyContent="start"
                     alignItems="center"
+                    minH="100px"
+                    bg={bg}
+                    boxShadow="1px 0px 1px"
                   >
                     <TeaIcon boxSize="5rem" fill="secondaryGreen.500" />
                     <Text ml="1" mt="3" fontSize="28px">
@@ -105,7 +105,7 @@ const Header = () => {
                     </Text>
                   </DrawerHeader>
                   <StyledDrawerBody onClose={onClose} />
-                  <DrawerFooter></DrawerFooter>
+                  <DrawerFooter />
                 </StyledDrawerContent>
               </Drawer>
             </>
