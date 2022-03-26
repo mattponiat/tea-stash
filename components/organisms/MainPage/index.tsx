@@ -1,5 +1,5 @@
 //Chakra-ui
-import { Flex, Grid } from "@chakra-ui/react";
+import { Flex, Grid, Heading } from "@chakra-ui/react";
 //Components
 import SearchBar from "components-ui/organisms/SearchBar";
 import TeaCard from "components-ui/molecules/TeaCard";
@@ -31,13 +31,18 @@ const MainPage = ({ teas }: TeasProps) => {
                 key={elem.name}
                 name={elem.name}
                 country={elem.country.name}
-                type={elem.typeOfTea.name}
+                teaType={elem.typeOfTea.name}
                 image={elem.image.url}
                 slug={elem.slug}
               />
             );
           })}
         </Grid>
+        {filteredData.length === 0 && (
+          <Flex justifyContent="center" alignItems="center" maxW="100%">
+            <Heading>No results found</Heading>
+          </Flex>
+        )}
       </Flex>
     </Flex>
   );
