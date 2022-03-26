@@ -49,6 +49,7 @@ const TeaInfoCard = ({
             w={width <= 1150 ? "100%" : "80%"}
             borderRadius="8px"
             overflow="hidden"
+            userSelect="none"
           >
             <Image
               src={teas.image.url}
@@ -67,8 +68,13 @@ const TeaInfoCard = ({
             minH="100%"
             gap="6"
           >
-            <Title teas={teas} />
-            <MoreInfo teas={teas} />
+            <Title
+              name={teas.name}
+              teaType={teas.typeOfTea.name}
+              city={teas.city}
+              country={teas.country.name}
+            />
+            <MoreInfo harvestDate={teas.harvestDate} price={teas.price} />
             <Desc markdown={markdown} />
           </Flex>
         </Grid>

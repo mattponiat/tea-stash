@@ -1,15 +1,20 @@
 import { Flex, Heading } from "@chakra-ui/react";
-import { ITeaTypes } from "types";
 
-const Title = ({ teas }: { teas: ITeaTypes }) => {
+interface TitleProps {
+  name: string;
+  teaType: string;
+  city: string;
+  country: string;
+}
+
+const Title = ({ name, teaType, city, country }: TitleProps) => {
   return (
     <Flex flexDirection="column">
       <Heading as="h1" size="2xl" color="secondaryGreen.500">
-        {teas.name}
+        {name}
       </Heading>
       <Heading as="h2" size="lg" color="GrayText" mt="2">
-        {teas.typeOfTea.name} tea from{" "}
-        {teas.city ? `${teas.city}, ${teas.country.name}` : teas.country.name}
+        {teaType} tea from {city ? `${city}, ${country}` : country}
       </Heading>
     </Flex>
   );

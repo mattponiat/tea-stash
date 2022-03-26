@@ -1,20 +1,23 @@
 //Chakra-ui
 import { Flex, Heading, useColorModeValue } from "@chakra-ui/react";
-//Types
-import { ITeaTypes } from "types";
 
-const MoreInfo = ({ teas }: { teas: ITeaTypes }) => {
+interface MoreInfoTypes {
+  harvestDate: string;
+  price: number;
+}
+
+const MoreInfo = ({ harvestDate, price }: MoreInfoTypes) => {
   const color = useColorModeValue("blackAlpha.800", "white");
 
   return (
     <Flex flexDirection="column" maxW="100%" color={color}>
-      {teas.harvestDate ? (
+      {harvestDate ? (
         <Heading as="h3" size="md" mb="2">
-          Harvested in {teas.harvestDate}
+          Harvested in {harvestDate}
         </Heading>
       ) : null}
       <Heading as="h3" size="md">
-        Sold for {teas.price}$
+        Sold for {price}$
       </Heading>
     </Flex>
   );
