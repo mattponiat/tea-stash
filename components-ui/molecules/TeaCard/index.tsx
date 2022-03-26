@@ -10,12 +10,12 @@ import styled from "@emotion/styled";
 interface TeaCardProps {
   name: string;
   country: string;
-  type: string;
+  teaType: string;
   image: string;
   slug: string;
 }
 
-const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
+const TeaCard = ({ name, country, teaType, image, slug }: TeaCardProps) => {
   const bg = useColorModeValue("mainBeige", "darkMode.main");
 
   return (
@@ -42,7 +42,7 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
           transform: "translateY(-2px)",
         }}
       >
-        <Box maxW="100%">
+        <Box maxW="100%" userSelect="none">
           <Image
             src={image}
             alt={name}
@@ -50,6 +50,8 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
             objectFit="cover"
             width="100px"
             height="50px"
+            sizes="(max-width: 767px) 200px, (max-width: 991px) 200px, 300px"
+            quality={30}
             priority
           />
         </Box>
@@ -65,7 +67,7 @@ const TeaCard = ({ name, country, type, image, slug }: TeaCardProps) => {
               Country of origin: <b>{country}</b>
             </Text>
             <Text>
-              Type of tea: <b>{type}</b>
+              Type of tea: <b>{teaType}</b>
             </Text>
           </Flex>
         </Flex>
