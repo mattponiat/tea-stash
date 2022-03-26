@@ -7,8 +7,6 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-    domains: ["media.graphcms.com"],
-    loader: "imgix",
-    path: "",
+    domains: ["media.graphcms.com"], //Change later to: media.graphassets.com
   },
 };
