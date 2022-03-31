@@ -1,11 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 //Chakra-ui
-import { Box, Flex, LinkBox, useColorModeValue } from "@chakra-ui/react";
-//Components
-import Label from "components-ui/atoms/Label";
-import Text from "components-ui/atoms/Text";
+import {
+  Box,
+  Flex,
+  Heading,
+  LinkBox,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import styled from "@emotion/styled";
+//Components
+import Text from "components-ui/atoms/Text";
 
 interface TeaCardProps {
   name: string;
@@ -61,7 +66,13 @@ const TeaCard = ({ name, country, teaType, image, slug }: TeaCardProps) => {
           h="100%"
           p="3"
         >
-          <Label>{name}</Label>
+          <Heading
+            fontSize="1.625rem"
+            color="secondaryGreen.500"
+            fontWeight="900"
+          >
+            {name}
+          </Heading>
           <Flex flexDirection="column">
             <Text>
               Country of origin: <b>{country}</b>
