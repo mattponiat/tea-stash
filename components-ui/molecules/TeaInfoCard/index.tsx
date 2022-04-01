@@ -38,7 +38,6 @@ const TeaInfoCard = ({
       >
         <Grid
           templateColumns="repeat(auto-fit, minmax(353px, 1fr))"
-          alignItems="center"
           justifyItems={width <= 768 ? "center" : "start"}
           maxW="1440px"
           w="100%"
