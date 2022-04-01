@@ -1,17 +1,16 @@
 //Chakra-ui
-import { Flex } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 //Components
 import VendorsList from "components-ui/molecules/VendorsList";
 
 const VendorsListContainer = () => {
   return (
-    <Flex
-      flexDirection="column"
-      alignItems="center"
-      gap="6"
+    <Grid
+      templateColumns="repeat(auto-fit, minmax(300px, 1fr))"
       maxW="100%"
       w="100%"
       mt="12"
+      gap="6"
     >
       <VendorsList
         logo="/images/eherbata-logo.png"
@@ -28,7 +27,7 @@ const VendorsListContainer = () => {
         name="The Tea Makers"
         href="https://www.theteamakers.co.uk/"
       />
-    </Flex>
+    </Grid>
   );
 };
 
