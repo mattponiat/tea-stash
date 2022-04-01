@@ -7,19 +7,20 @@ const VendorsDesc = () => {
   return (
     <Flex
       flexDirection="column"
-      maxW="400px"
+      justifyContent="center"
+      alignItems="center"
+      maxW="100%"
+      w="100%"
       minH="auto"
       p="3"
       boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"
       borderRadius="8px"
       bg={bg}
     >
-      <Flex justifyContent="center" mb="3">
-        <Heading as="h1" size="xl" color="secondaryGreen.500">
-          Vendors
-        </Heading>
-      </Flex>
-      <Text fontSize="lg">
+      <Heading as="h1" size="2xl" color="secondaryGreen.500" mb="3">
+        Vendors
+      </Heading>
+      <Text fontSize="xl">
         Here’s the list of all the vendors used for getting the images,
         information, pricing etc.
       </Text>

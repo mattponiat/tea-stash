@@ -20,9 +20,8 @@ const VendorsList = ({ logo, name, href }: VendorsListProps) => {
         target="_blank"
         justifyContent="start"
         alignItems="center"
-        maxW="400px"
-        w="100%"
         minH="50px"
+        maxW="100%"
         bg={bg}
         borderRadius="8px"
         boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"

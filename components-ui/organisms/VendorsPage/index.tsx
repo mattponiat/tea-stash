@@ -14,7 +14,7 @@ const VendorsPage = () => {
       <Flex
         flexDirection="column"
         alignItems="center"
-        maxW="500px"
+        maxW="1440px"
         w="95%"
         minH="auto"
         my="12"
