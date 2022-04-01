@@ -43,7 +43,7 @@ const TeaCard = ({ name, country, teaType, image, slug }: TeaCardProps) => {
           transform: "translateY(-2px)",
         }}
         _focus={{
-          boxShadow: "0px 2px 4pxrgba(0, 0, 0, 0.2)",
+          boxShadow: "0px 2px 7px rgba(0,0,0,0.25)",
           transform: "translateY(-2px)",
         }}
       >
