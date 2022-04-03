@@ -28,6 +28,10 @@ const theme = extendTheme({
       hover: "#424b5a",
     },
   },
+  shadows: {
+    mainShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
+    hoverShadow: "0px 2px 7px rgba(0, 0, 0, 0.25)",
+  },
   components: {
     Menu,
   },
