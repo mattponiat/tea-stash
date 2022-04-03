@@ -35,15 +35,15 @@ const TeaCard = ({ name, country, teaType, image, slug }: TeaCardProps) => {
         minW="auto"
         bg={bg}
         borderRadius="8"
-        boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"
+        boxShadow="mainShadow"
         transition="box-shadow 0.2s, transform 0.2s"
         overflow="hidden"
         _hover={{
-          boxShadow: "0px 2px 7px  rgba(0,0,0,0.25)",
+          boxShadow: "hoverShadow",
           transform: "translateY(-2px)",
         }}
         _focus={{
-          boxShadow: "0px 2px 7px rgba(0,0,0,0.25)",
+          boxShadow: "hoverShadow",
           transform: "translateY(-2px)",
         }}
       >
@@ -89,7 +89,7 @@ const TeaCard = ({ name, country, teaType, image, slug }: TeaCardProps) => {
 
 const Wrapper = styled(LinkBox)`
   :focus:not([data-focus-visible-added]) {
-    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+    box-shadow: ${({ theme }) => theme.shadows.hoverShadow};
   }
 `;
 

@@ -13,7 +13,7 @@ const VendorsDesc = () => {
       w="100%"
       minH="auto"
       p="3"
-      boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"
+      boxShadow="mainShadow"
       borderRadius="8px"
       bg={bg}
     >

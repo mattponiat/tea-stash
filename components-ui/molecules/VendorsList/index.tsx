@@ -24,7 +24,7 @@ const VendorsList = ({ logo, name, href }: VendorsListProps) => {
         maxW="100%"
         bg={bg}
         borderRadius="8px"
-        boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"
+        boxShadow="mainShadow"
         overflow="hidden"
       >
         <Box w="50px" h="50px" borderRadius="8px" userSelect="none">
@@ -49,7 +49,7 @@ const VendorsList = ({ logo, name, href }: VendorsListProps) => {
 
 const Wrapper = styled(Flex)`
   :focus:not([data-focus-visible-added]) {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: ${({ theme }) => theme.shadows.mainShadow};
   }
 `;
 

@@ -19,7 +19,7 @@ const StyledDrawerLink = ({ onClose, href, children }: DrawerLinkTypes) => {
         minW="65%"
         p="35px"
         bg={bg}
-        boxShadow="0px 2px 4px rgba(0, 0, 0, 0.2)"
+        boxShadow="mainShadow"
         borderRadius="8"
         fontSize="1.625rem"
         _hover={{ color: "secondaryGreen.500" }}
@@ -33,7 +33,7 @@ const StyledDrawerLink = ({ onClose, href, children }: DrawerLinkTypes) => {
 
 const StyledButton = styled(Button)`
   :focus:not([data-focus-visible-added]) {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: ${({ theme }) => theme.shadows.mainShadow};
   }
 `;
 
