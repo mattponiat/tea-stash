@@ -26,21 +26,6 @@ const VendorsListContainer = () => {
         name="The Tea Makers"
         href="https://www.theteamakers.co.uk/"
       />
-      <VendorsList
-        logo="/images/theteamakers-logo.jpg"
-        name="The Tea Makers"
-        href="https://www.theteamakers.co.uk/"
-      />
-      <VendorsList
-        logo="/images/theteamakers-logo.jpg"
-        name="The Tea Makers"
-        href="https://www.theteamakers.co.uk/"
-      />
-      <VendorsList
-        logo="/images/theteamakers-logo.jpg"
-        name="The Tea Makers"
-        href="https://www.theteamakers.co.uk/"
-      />
     </Grid>
   );
 };
