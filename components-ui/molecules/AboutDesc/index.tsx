@@ -19,7 +19,7 @@ const AboutDesc = () => {
         Tea-stash is a place to get information about teas from all over the
         world.
         <br />
-        Since i’m passionate about tea, i decided to create this website to let
+        Since I’m passionate about tea, I decided to create this website to let
         people have an easy way to find out more about teas.
         <br />
         <br />
