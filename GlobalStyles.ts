@@ -12,7 +12,7 @@ export const GlobalStyles = css`
 
   //Main scroll styles
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
     background-color: #f5f5f5;
   }
 
