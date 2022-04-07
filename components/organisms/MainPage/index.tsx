@@ -20,7 +20,7 @@ const MainPage = ({ teas }: TeasProps) => {
       <Flex flexDirection="column" maxW="1440px" w="95%" my="12">
         <SearchBar teas={teas} />
         <Grid
-          templateColumns="repeat(auto-fill, minmax(313px, 1fr))"
+          templateColumns="repeat(auto-fill, minmax(min(100%, 313px), 1fr))"
           gridColumn="1 / -1"
           gap="14"
           w="100%"
