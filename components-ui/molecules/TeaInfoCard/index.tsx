@@ -46,6 +46,7 @@ const TeaInfoCard = ({
         >
           <Box
             w={width <= 1150 ? "100%" : "80%"}
+            h="fit-content"
             borderRadius="8px"
             overflow="hidden"
             userSelect="none"
