@@ -12,7 +12,7 @@ import { Fade, useDisclosure } from "@chakra-ui/react";
 import { ITeaTypes } from "types";
 import { ParsedUrlQuery } from "querystring";
 //Components
-import TeaInfoCard from "components-ui/molecules/TeaInfoCard";
+import TeaInfoPage from "components-ui/organisms/TeaInfoPage";
 
 const TeaPage: NextPage<{
   tea: ITeaTypes;
@@ -26,7 +26,7 @@ const TeaPage: NextPage<{
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Teas - {tea.name}</title>
       </Head>
-      <TeaInfoCard teas={tea} markdown={<MDXRemote {...source} />} />
+      <TeaInfoPage teas={tea} markdown={<MDXRemote {...source} />} />
     </Fade>
   );
 };

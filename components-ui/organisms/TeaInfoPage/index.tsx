@@ -10,7 +10,7 @@ import { ITeaTypes } from "types";
 //Hooks
 import { useWindowSize } from "usehooks-ts";
 
-const TeaInfoCard = ({
+const TeaInfoPage = ({
   teas,
   markdown,
 }: {
@@ -83,4 +83,4 @@ const TeaInfoCard = ({
   );
 };
 
-export default TeaInfoCard;
+export default TeaInfoPage;
