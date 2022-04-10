@@ -64,15 +64,25 @@ const CountryContainer = ({ teas }: TeasProps) => {
           <MenuItem value="Any" onClick={() => setCurrentCountry("Any")}>
             Any
           </MenuItem>
-          {uniqueArray.map((elem) => (
-            <MenuItem
-              key={elem.country.name}
-              value={elem.country.name}
-              onClick={() => setCurrentCountry(elem.country.name)}
-            >
-              {elem.country.name}
-            </MenuItem>
-          ))}
+          {uniqueArray
+            .sort((a, b) => {
+              if (a.country.name < b.country.name) {
+                return -1;
+              }
+              if (a.country.name > b.country.name) {
+                return 1;
+              }
+              return 0;
+            })
+            .map((elem) => (
+              <MenuItem
+                key={elem.country.name}
+                value={elem.country.name}
+                onClick={() => setCurrentCountry(elem.country.name)}
+              >
+                {elem.country.name}
+              </MenuItem>
+            ))}
         </MenuList>
       </Menu>
     </Flex>

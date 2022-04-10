@@ -64,15 +64,25 @@ const TypeContainer = ({ teas }: TeasProps) => {
           <MenuItem value="Any" onClick={() => setCurrentType("Any")}>
             Any
           </MenuItem>
-          {uniqueArray.map((elem) => (
-            <MenuItem
-              key={elem.typeOfTea.name}
-              value={elem.typeOfTea.name}
-              onClick={() => setCurrentType(elem.typeOfTea.name)}
-            >
-              {elem.typeOfTea.name}
-            </MenuItem>
-          ))}
+          {uniqueArray
+            .sort((a, b) => {
+              if (a.typeOfTea.name < b.typeOfTea.name) {
+                return -1;
+              }
+              if (a.typeOfTea.name > b.typeOfTea.name) {
+                return 1;
+              }
+              return 0;
+            })
+            .map((elem) => (
+              <MenuItem
+                key={elem.typeOfTea.name}
+                value={elem.typeOfTea.name}
+                onClick={() => setCurrentType(elem.typeOfTea.name)}
+              >
+                {elem.typeOfTea.name}
+              </MenuItem>
+            ))}
         </MenuList>
       </Menu>
     </Flex>
