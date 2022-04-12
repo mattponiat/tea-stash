@@ -57,7 +57,6 @@ const TeaCard = ({ name, country, teaType, image, slug }: TeaCardProps) => {
             height="50px"
             sizes="(max-width: 767px) 200px, (max-width: 991px) 200px, 300px"
             quality={30}
-            priority
           />
         </Box>
         <Flex

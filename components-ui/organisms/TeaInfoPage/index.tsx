@@ -59,7 +59,6 @@ const TeaInfoPage = ({
               objectFit="cover"
               width="90"
               height="88"
-              priority
             />
           </Box>
           <Flex

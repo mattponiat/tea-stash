@@ -90,7 +90,7 @@ export const getStaticProps: GetStaticProps = async ({
 
   const source = await serialize(tea.description);
 
-  return { props: { tea, source }, revalidate: 86400 };
+  return { props: { tea, source } };
 };
 
 export default TeaPage;
