@@ -42,6 +42,7 @@ const TeaInfoPage = ({
           maxW="1440px"
           w="100%"
           my="12"
+          px="1.5"
           gap={width <= 1150 ? "6" : "0"}
         >
           <Box
