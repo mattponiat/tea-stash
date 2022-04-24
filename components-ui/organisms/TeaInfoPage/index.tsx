@@ -43,10 +43,10 @@ const TeaInfoPage = ({
           w="100%"
           my="12"
           px="1.5"
-          gap={width <= 1150 ? "6" : "0"}
+          gap={width <= 1150 ? "12" : "0"}
         >
           <Box
-            w={width <= 1150 ? "100%" : "80%"}
+            w={width <= 1150 ? "100%" : "85%"}
             h="fit-content"
             borderRadius="8px"
             overflow="hidden"
