@@ -7,12 +7,6 @@ const SearchTeas = () => {
   const [currentType, setCurrentType] = React.useState("Any");
   const [inputText, setInputText] = React.useState("");
 
-  //Set the country and type whenever they change
-  React.useEffect(() => {
-    setCurrentCountry(currentCountry);
-    setCurrentType(currentType);
-  }, [currentCountry, currentType]);
-
   //Get country and type from session storage
   React.useEffect(() => {
     const countryData = sessionStorage.getItem("country");
