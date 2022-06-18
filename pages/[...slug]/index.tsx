@@ -9,7 +9,7 @@ import client from "apolloClient";
 //Chakra-ui
 import { Fade, useDisclosure } from "@chakra-ui/react";
 //Types
-import { ITeaTypes } from "types";
+import { ITeaTypes, TeasProps } from "types";
 import { ParsedUrlQuery } from "querystring";
 //Components
 import TeaInfoPage from "components-ui/organisms/TeaInfoPage";
@@ -85,7 +85,7 @@ export const getStaticProps: GetStaticProps = async ({
     variables: { slug },
   });
 
-  const { teas } = data;
+  const { teas }: TeasProps = data;
   const tea = teas[0];
 
   const source = await serialize(tea.description);

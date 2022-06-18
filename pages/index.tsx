@@ -49,7 +49,8 @@ export const getStaticProps: GetStaticProps = async () => {
     `,
   });
 
-  const { teas } = data;
+  const { teas }: TeasProps = data;
+
   return {
     props: {
       teas,
