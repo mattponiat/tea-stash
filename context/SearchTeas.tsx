@@ -50,6 +50,11 @@ const SearchTeas = () => {
     return result;
   };
 
+  const memoFilterTeas = React.useMemo(
+    () => filterTeas,
+    [currentCountry, currentType, inputText]
+  );
+
   return {
     currentCountry,
     setCurrentCountry,
@@ -58,6 +63,7 @@ const SearchTeas = () => {
     inputText,
     inputHandler,
     filterTeas,
+    memoFilterTeas,
   };
 };
 
