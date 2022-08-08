@@ -12,8 +12,12 @@ const Logo = () => {
           p="0"
           fontWeight="black"
           fontSize="2rem"
-          _hover={{ background: "none", color: "secondaryGreen.500" }}
-          _active={{ background: "none", outline: "none", boxShadow: "none" }}
+          _hover={{ backgroundColor: "none", color: "secondaryGreen.500" }}
+          _active={{
+            backgroundColor: "none",
+            outline: "none",
+            boxShadow: "none",
+          }}
         >
           <SpanStyled>tea</SpanStyled>
           <span>-stash</span>

@@ -49,13 +49,13 @@ const CountryContainer = ({ teas }: TeasProps) => {
           boxShadow="0px 0px 1px rgba(0, 0, 0, 0.3)"
           _hover={
             colorMode === "light"
-              ? { background: "gray.200" }
-              : { background: "darkMode.hover" }
+              ? { backgroundColor: "gray.200" }
+              : { backgroundColor: "darkMode.hover" }
           }
           _active={
             colorMode === "light"
-              ? { background: "gray.300" }
-              : { background: "darkMode.hover" }
+              ? { backgroundColor: "gray.300" }
+              : { backgroundColor: "darkMode.hover" }
           }
         >
           {currentCountry}

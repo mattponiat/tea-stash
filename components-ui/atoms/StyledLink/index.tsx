@@ -17,8 +17,8 @@ const StyledLink = ({ href, children }: LinkTypes) => {
           p="0 6px"
           fontSize="1.25rem"
           fontWeight="600"
-          _hover={{ background: "none", color: "secondaryGreen.500" }}
-          _active={{ color: "secondaryGreen.400" }}
+          _hover={{ backgroundColor: "none", color: "secondaryGreen.500" }}
+          _active={{ color: "" }}
         >
           {children}
         </Button>
