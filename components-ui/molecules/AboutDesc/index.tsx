@@ -27,16 +27,6 @@ const AboutDesc = () => {
         <br />
         <br />
       </Text>
-      <Text fontSize="xl">
-        If you have any questions or suggestions feel free to contact me at{" "}
-        <Text as="span" color="secondaryGreen.500">
-          pinkyball50@gmail.com
-        </Text>{" "}
-        or at my discord{" "}
-        <Text as="span" color="secondaryGreen.500">
-          young chudy#6460
-        </Text>
-      </Text>
       <Text fontSize="xl" mt="2">
         If you want to see the source code, feel free to check it out at{" "}
         <Text
